@@ -36,5 +36,3 @@ Each inclusion is loaded and executed (3 times below).
 
 <!-- Not blocked ... -->
 ```
-
-Can load cross-origin without CORS headers. Cookies sent by default.
