@@ -1,12 +1,12 @@
 [Top](../nodejs.md)
 
-# Install NodeJS
+__Links__
 
-[https://nodejs.org/en/download](https://nodejs.org/en/download)
+- [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
-[https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+- [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
-## Instructions
+__Bash__
 
 ```bash
 # Download and install nvm:
