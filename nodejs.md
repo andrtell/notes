@@ -5,7 +5,7 @@ __Links__
 - [NodeJS](https://nodejs.org/en)
   
   - [Docs](https://nodejs.org/docs/latest/api/)
-  - [Learn](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) 
+  - [Tutorial](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) 
 
 __Notes__
 
