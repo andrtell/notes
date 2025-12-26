@@ -7,20 +7,28 @@ MDN
 
 __Browser__
 
-Names are global (added to `window`).
+_Scope_
+
+Top-level names in classic scripts are global (added to `window`).
 
 ```html
 <script>
     var x = 1;
-
-    function y() {
-        console.log('x = ' + x);
-    }
+    function y() { console.log('x = ' + x); }
 </script>
 
 <script>
     y(); // console: x = 1
 </script>
+```
+
+_Load_
+
+```
+<script src="x.js"> 
+
+                 ├─ JS Download ─┤├─ JS Execution ─┤
+├─ HTML Parsing ─┤          HTML Paused            ├─ HTML Parsing ─┤
 ```
 
 Blocks HTML parsing unless `defer` or `async` is used.
