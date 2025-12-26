@@ -14,7 +14,7 @@ Top-level names in classic scripts are global (added to `window`).
 ```html
 <script>
     var x = 1;
-    function g(a) { console.log('a = ' + val); }
+    function g(a) { console.log('a = ' + a); }
 </script>
 
 <script>
@@ -36,7 +36,6 @@ _Load_
 <script defer src="z.js"> 
 ```
 
-
 ```
                           ┌── JS download ──┐           ┌── JS execution ──┐
 └── HTML parsing ───────────────────────────────────────┘ 
@@ -45,7 +44,6 @@ _Load_
 ```html
 <script async src="z.js"> 
 ```
-
 
 ```
                     ┌── JS download ──┬── JS execution ──┐                  
