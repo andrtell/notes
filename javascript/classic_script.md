@@ -14,11 +14,11 @@ Top-level names in classic scripts are global (added to `window`).
 ```html
 <script>
     var x = 1;
-    function g(val) { console.log('val = ' + val); }
+    function g(a) { console.log('a = ' + val); }
 </script>
 
 <script>
-    g(x); // console: val = 1
+    g(x); // console: a = 1
 </script>
 ```
 
