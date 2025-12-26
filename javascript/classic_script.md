@@ -27,23 +27,23 @@ _Load_
 ```
 <script src=".."> 
 
-╷                  ┌── JS download ──┐┌── JS execution ──┐                  ╷
-└── HTML parsing ──┘                 └┘                  └── HTML parsing ──┘
+                   ┌── JS download ──┬── JS execution ──┐                  
+└── HTML parsing ──┘                                    └── HTML parsing ──┘
 
 ```
 
 ```
 <script defer src=".."> 
 
-╷                  ┌── JS download ──┐    ┌── JS execution ──┐
-└── HTML parsing ─────────────────────────┘                  ╵
+                   ┌── JS download ──┐    ┌── JS execution ──┐
+└── HTML parsing ─────────────────────────┘ 
 
 ```
 
 ```
 <script async src=".."> 
 
-╷                   ┌── JS download ──┐┌── JS execution ──┐                  ╷
-└── HTML parsing ──────────────────────┘                  └── HTML parsing ──┘
+                    ┌── JS download ──┬── JS execution ──┐                  
+└── HTML parsing ─────────────────────┘                  └── HTML parsing ──┘
 
 ```
