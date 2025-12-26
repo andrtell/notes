@@ -16,4 +16,6 @@ __Links__
 
 __Notes__
 
-- ["strict mode"](./javascript/strict_mode.md)
+["strict mode"](./javascript/strict_mode.md)
+
+[Classic scripts](./javascript/classic_script.md) 
