@@ -24,7 +24,7 @@ Top-level names in classic scripts are global (added to `window`).
 
 _Load_
 
-```
+```html
 <script src="z.js"> 
 ```
 ```
@@ -32,7 +32,7 @@ _Load_
 └── HTML parsing ──┘                                    └── HTML parsing ──┘
 ```
 
-```
+```html
 <script defer src="z.js"> 
 ```
 ```
@@ -40,7 +40,7 @@ _Load_
 └── HTML parsing ───────────────────────────────────────┘ 
 ```
 
-```
+```html
 <script async src="z.js"> 
 ```
 ```
