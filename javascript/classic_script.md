@@ -2,7 +2,8 @@
 
 __Links__
 
-- MDN | [<script>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script)
+MDN
+> [<script>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script)
 
 __Browser__
 
