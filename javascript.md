@@ -2,14 +2,14 @@
 
 # Javascript
 
-[ECMAScript / 2026 Language Specification](https://tc39.es/ecma262/)
+ECMAScript: [2026 Language Specification](https://tc39.es/ecma262/)
 
-[Ecmascript / Propsals](https://github.com/tc39/proposals)
+ECMAScript: [Propsals](https://github.com/tc39/proposals)
 
-[MDN / Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+MDN: [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-[MDN / Javscript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+MDN: [Javscript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 
-[MDN / Javascript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+MDN: [Javascript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 ## Notes
