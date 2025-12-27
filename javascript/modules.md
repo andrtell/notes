@@ -9,7 +9,7 @@ __Browser__
 
 _Scope_
 
-Top-level names in modules are private to the module (unless exported).
+Top-level names are private to the module (unless exported).
 
 ```html
 <script type="module">
