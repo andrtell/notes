@@ -9,7 +9,7 @@ __Browser__
 
 _Scope_
 
-Top-level names are private to the module (unless exported).
+Top-level names are private to the module unless _exported_.
 
 ```html
 <script type="module">
@@ -24,6 +24,8 @@ Top-level names are private to the module (unless exported).
 ```
 
 _Load_
+
+Modules can be loaded via the `<script type="module">` tag.
 
 ```html
 <script type="module" src="z.js">
@@ -42,6 +44,38 @@ _Load_
                     ┌── JS download (+ deps) ──┬── JS execution ──┐                  
 └── HTML parsing ──────────────────────────────┘                  └── HTML parsing ──┘
 ```
+
+Modules can be loaded via the `import` statement.
+
+```html
+<script type="module">
+    import {} from './a.js';
+    import {} from './b.js';
+    console.log('top');
+</script>
+```
+
+```javascript
+// a.js
+console.log('a');
+```
+
+```javascript
+// b.js
+console.log('b');
+```
+```
+                                   ┌── ./b.js download ──┐
+                                   ┌── ./a.js download ──┐
+                          ┌──── JS download (+ deps) ────┐     ┌── a.js eval ──┐┌── b.js eval ──┐┌── top eval ──┐
+└── HTML parsing ──────────────────────────────────────────────┘
+```
+```
+a
+b
+top
+```
+
 
 Modules are loaded and executed once.
 
