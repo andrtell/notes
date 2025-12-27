@@ -57,4 +57,21 @@ Modules are loaded and executed once.
 <script type="module" src="z.js"></script>
 ```
 
+Modules can `import` other modules.
+
+```html
+<script type="module">
+    import { x, g } from './m.js';
+    g(x);
+</script>
+```
+
+```javascript
+// ./m.js
+export const x = 1;
+
+export function g(a) { console.log(a); }
+```
+
+
 __NodeJS__
