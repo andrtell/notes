@@ -16,8 +16,8 @@ Modules can be loaded via the `<script type="module">` tag.
 ```
 
 ```
-                          ┌── JS fetch (+ deps) ──┐         ┌──── JS exec ────┐
-└── HTML parsing ───────────────────────────────────────────┘ 
+                       ┌── fetch z.js (+ deps) ──┐                 ┌─── exec. z.js ────
+─── parse HTML  ───────────────────────────────────────────────────┘ 
 ```
 
 ```html
@@ -25,8 +25,8 @@ Modules can be loaded via the `<script type="module">` tag.
 ```
 
 ```
-                     ┌── JS fetch (+ deps) ──┬── JS exec ──┐                  
-└── HTML parsing ────────────────────────────┘             └── HTML parsing ──┘
+                       ┌── fetch z.js (+ deps) ──┬─── exec. z.js ───┐                  
+─── parse HTML ──────────────────────────────────┘                  └── parse HTML ────
 ```
 
 Modules can be loaded via the `import` statement.
@@ -49,10 +49,10 @@ console.log('a');
 console.log('b');
 ```
 ```
-                                 ┌── ./b.js fetch ──┐
-                                 ┌── ./a.js fetch ──┐
-                       ┌──── top fetch (+ deps) ────┐    ┌── a.js exec ──┐┌── b.js exec ──┐┌── top exec ──┐
-└── HTML parsing ────────────────────────────────────────┘
+                                ┌── ./b.js fetch ──┐
+                                ┌── ./a.js fetch ──┐
+                       ┌─── top fetch (+ deps) ────┐    ┌─── a.js exec ───┐┌─── b.js exec ───┐┌─── top exec ───
+─── HTML parsing ───────────────────────────────────────┘
 ```
 ```
 a
@@ -74,8 +74,8 @@ console.log('top');
 console.log('a');
 ```
 ```
-                          ┌── top fetch (+ deps) ──┐            ┌── top exec ──┐┌── a.js fetch ──┐┌── a.js exec ──┐
-└── HTML parsing ───────────────────────────────────────────────┘ 
+                       ┌─── top fetch (+ deps) ───┐        ┌── top exec ──┐┌── a.js fetch ──┐┌── a.js exec ──>
+>── HTML parsing ──────────────────────────────────────────┘ 
 ```
 
 ```
