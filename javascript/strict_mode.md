@@ -13,4 +13,4 @@ __Browser__
 
 __Notes__
 
-ES6 modules are always `strict`.
+[Modules](./modules.md) are always `strict`.
