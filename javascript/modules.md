@@ -57,7 +57,9 @@ Modules are loaded and executed once.
 <script type="module" src="z.js"></script>
 ```
 
-Modules can `import` features from other modules.
+_Import_
+
+Modules can `export` features for `import` in other modules.
 
 ```html
 <script type="module">
