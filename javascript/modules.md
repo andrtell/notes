@@ -120,3 +120,30 @@ M.f(); // console: Mmm
 export function f() {
     console.log('Mmm');
 }
+```
+
+Modules can be re-exported (aggregated).
+
+```html
+<script type="module">
+import * as Agg from "./agg.js";
+Agg.f(); // console: hello from a
+Agg.g(); // console: hello from b
+</script>
+```
+
+```javascript
+// agg.js
+export * from "./a.js";
+export { g } from "./b.js";
+```
+
+```javascript
+// a.js
+export function f() { console.log('hello from a');
+```
+
+```javascript
+// b.js
+export function g() { console.log('hello from b');
+```
