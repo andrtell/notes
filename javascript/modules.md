@@ -117,9 +117,9 @@ function f() {}
 export { f };
 ```
 
-Imported bindings are __live__. 
+Imported bindings are __live__, __read-only__ references. 
 
-The alias `import { n }` below is a __reference__, not a copy of the value.
+Both primitives and objects reflect updates from the exporting module.
 
 ```html
 <script type="module">
