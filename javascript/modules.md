@@ -88,10 +88,10 @@ A module can have `1`  _default_ export.
 
 ```html
 <script type="module">
-    import f from './a.js'; // default import
-    import g from './b.js'; // 
-    f(); // console: hello
-    g(); // console: world
+    import g from './a.js'; // default import
+    import h from './b.js'; // 
+    g(); // console: hello
+    h(); // console: world
 </script>
 ```
 ```javascript
