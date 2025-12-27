@@ -94,6 +94,22 @@ function f() {}
 export { f };
 ```
 
+Imported bindings are __live__.
+
+```html
+<script type="module">
+import { n, inc } from './a.js';
+console.log(n); // => 0
+inc();
+console.log(n); // => 1
+</script>
+```
+```javascript
+// a.js
+export let n = 0;
+export function inc() { n = n + 1; }
+```
+
 A _single_ `export` can be marked as `default`.
 
 ```html
