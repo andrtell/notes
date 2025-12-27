@@ -43,10 +43,18 @@ _Load_
 └── HTML parsing ──────────────────────────────┘                  └── HTML parsing ──┘
 ```
 
+Modules are loaded and executed once.
+
+```html
+<script type="module" async src="z.js"> 
 ```
 
-Modules are loaded and executed only once.
+is equivalent to:
 
+
+```html
+<script type="module" async src="z.js"> 
+<script type="module" async src="z.js"> 
 ```
 
 __NodeJS__
