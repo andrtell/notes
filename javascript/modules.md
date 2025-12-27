@@ -83,5 +83,3 @@ function g(w) { console.log('w = ' + w); }
 
 export {y, g};
 ```
-
-__NodeJS__
