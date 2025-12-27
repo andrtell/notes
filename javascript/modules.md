@@ -46,7 +46,7 @@ _Load_
 Modules are loaded and executed once.
 
 ```html
-<script type="module" async src="z.js"></script>
+<script type="module" src="z.js"></script>
 ```
 
 is equivalent to:
