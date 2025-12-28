@@ -39,7 +39,7 @@ Classic scripts can be loaded via the `<script>` tag.
 
 _Scope_
 
-Top-level names in classic scripts are made global (as properties on `window`).
+Top-level names declare via `var` or `function` in classic scripts are made global (as properties on `window`).
 
 ```html
 <script>
