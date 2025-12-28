@@ -24,3 +24,5 @@ __Notes__
 [Modules](./javascript/modules.md) 
 
 [this](./javascript/this.md)
+
+[Objects](./javascript/objects.md)
