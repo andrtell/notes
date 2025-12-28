@@ -11,21 +11,13 @@ __This__
 <script type="module">
   function f() { return this; }
 
-  f(); // => undefined (strict-mode)
-</script>
-```
+  f(); // -> undefined (strict-mode)
 
-```html
-<script type="module">
-  // ...
-  f.call(7); // => 7
-</script>
-```
-```html
-<script type="module">
-  // ...
-  let obj = { f: f }
-  obj.f(); // => { f: f }
+  f.call(7) // -> 7
+
+  let obj = { f: f };
+  obj.f(); // -> { f: f }
+
 </script>
 ```
 
