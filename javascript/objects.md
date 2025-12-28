@@ -17,4 +17,8 @@ let a = { x: 1 }
 let b = new Object()
 b.x = 1
 
+typeof {} // -> "object"
+
+
+
 </script>
