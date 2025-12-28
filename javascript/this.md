@@ -12,7 +12,7 @@ __This__
   function f() {
     return this;
   }
-  f(); // => undefined
+  f(); // => undefined (cuz strict-mode)
 </script>
 ```
 
