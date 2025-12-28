@@ -26,11 +26,6 @@ a["x"];
 // property missing
 a.z; // -> undefined
 
-// keys are always strings
-a[7] = 9;
-
-a["7"]; // -> 9
-
 // computed property names
 let c = {
   ["a" + "b"]: 12
