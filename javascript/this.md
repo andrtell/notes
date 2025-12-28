@@ -9,6 +9,8 @@ __This__
 
 ```html
 <script type="module">
+  this; // -> undefined
+
   function f() { return this; }
 
   f(); // -> undefined (strict-mode)
