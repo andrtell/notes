@@ -55,6 +55,10 @@ __This__
 
   k.call(7); // -> 7
 
+  function C() { this.x = 1; }
+
+  new C(); // -> { x: 1 }
+
 </script>
 ```
 
