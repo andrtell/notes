@@ -13,7 +13,7 @@ __This__
 
   function f() { return this; }
 
-  f(); // -> undefined (strict-mode)
+  f(); // -> undefined
 
   f.call(7) // -> 7
 
