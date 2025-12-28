@@ -4,6 +4,8 @@ __Links__
 
 MDN
 > [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+>
+> [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone)
 
 __Objects__
 
@@ -44,4 +46,14 @@ let b = { y : 2 }
 { ...a, ... b} // spread operator
 
 Object.assign({}, a , b)
+```
+
+Deep copy
+
+```javascript
+let a = { x : 1 };
+
+let b = { a: a };
+
+structuredClone(b);
 ```
