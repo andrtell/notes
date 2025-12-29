@@ -11,15 +11,15 @@ MDN
 
 ```javascript
 let a = {
-  times: 3,
+  count: 1,
 
   // Iterator protocol
 
   next() { 
-    if (this.times > 0) {
-      return {value: this.times--, done: false};
+    if (this.count < 4) {
+      return {value: this.count++, done: false};
     }
-    return {done: true};
+    return {value: undefined, done: true};
   },
   
   // Iterable
@@ -35,5 +35,5 @@ for (const x of a) {
   v.push(x)
 }
 
-v; // -> [3, 2, 1]
+v; // -> [1, 2, 3]
 ```
