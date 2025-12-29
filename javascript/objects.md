@@ -86,7 +86,7 @@ for (let k in f) {   // iterates over enumerable properties
 v; // -> [1, 2];
 ```
 
-See: Arrays and iterators (todo).
+See: Arrays and [Iterators](./iterators.md).
 
 Shallow copy.
 
