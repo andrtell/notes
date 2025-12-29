@@ -62,6 +62,9 @@ Generator functions returns an iterator.
 
 ```javascript
 let a = {
+
+  // Iterable
+
   *[Symbol.iterator]() { // returns a new iterator every time.
     yield 1;
     yield 2;
