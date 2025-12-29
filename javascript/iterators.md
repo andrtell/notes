@@ -51,3 +51,9 @@ n; // -> 1
 m; // -> [2, 3]
 
 ```
+
+Built in iterators.
+
+```
+String, Array, TypedArray, Map, Set, and Segments ...
+```
