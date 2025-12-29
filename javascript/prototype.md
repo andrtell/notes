@@ -9,7 +9,7 @@ __Notes__
 
 [Objects](./objects.md)
 
-__Prototypes__
+# __Prototypes__
 
 _"There are ONLY objects"_
 
