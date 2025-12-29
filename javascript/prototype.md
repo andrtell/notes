@@ -61,4 +61,34 @@ C.prototype.isPrototypeOf(d); // -> true
                            └─ [[prototype]] ──> Object.prototype
 ```
 
+```javascript
+class E {
+    constructor() {
+        this.z = 1;
+    }
+}
+
+(typeof E); // -> "function"
+
+class F extends E {}
+
+Object.getPrototypeOf(F.prototype) == E.prototype; // -> true
+
+let g = new F();
+
+Object.getPrototypeOf(g) === F.prototype; // -> true
+
+(g instanceof F); // -> true
+(g instanceof E); // -> true
+
+g.z; // -> 1
+```
+
+```
+──> g
+    ├─ z: 1
+    └─ [[prototype]] ──> F.prototype
+                           └─ [[prototype]] ──> E.prototype
+                                                  └─ [[prototype]] ──> Object.prototype
+```
 
