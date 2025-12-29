@@ -5,9 +5,7 @@ __Links__
 MDN
 > [<script>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script)
 
-__Browser__
-
-_Load_
+# Classic scripts
 
 Classic scripts can be loaded via the `<script>` tag.
 
