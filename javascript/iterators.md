@@ -57,3 +57,25 @@ Built in iterators.
 ```
 String, Array, TypedArray, Map, Set, and Segments ...
 ```
+
+Generator functions returns an iterator.
+
+```javascript
+let a = {
+  *[Symbol.iterator]() { // returns a new iterator every time.
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+}
+
+let v = [ ...a ];
+
+v; // -> [1, 2, 3];
+
+let w = [ ...a ];
+
+w // -> [1, 2, 3];
+```
+
+@TODO: async
