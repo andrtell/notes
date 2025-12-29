@@ -43,7 +43,7 @@ Object.getPrototypeOf(d) === C.prototype; // -> true
 
 d.y; // -> 1
 
-b.hasOwnProperty("y"); // -> true
+d.hasOwnProperty("y"); // -> true
 
 ("y" in d); // -> true
 ```
