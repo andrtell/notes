@@ -13,40 +13,45 @@ MDN
 
 __Objects__
 
+Create
+
 ```javascript
 // literal
-
 let a = { x: 1 };
 
 // constructed
-
-let b = new Object()
+let b = new Object();
 b.x = 1;
+```
 
-// property access
+Properties
 
-a.x;
-
-// key access
-
-a["x"];
-
-// exists?
-
-a.z; // -> undefined
-
-("z" in a); // -> false (+ proto-chain)
-
-z.hasOwnProperty("z"); // -> false.
-
-// computed name
-
+```javascript
 let c = {
-  ["a" + "b"]: 12
+  x: 1,
+  ["y" + "z"]: 2
 }
 
-c.ab; // -> 12
+c.x;     // -> 1
+c["x"];  // -> 1
+c.yz;    // -> 2
+```
 
+Property exists?
+
+```javascript
+let d = {}
+
+d.z; // -> undefined
+
+("z" in d); // -> false
+
+d.hasOwnProperty("z"); // -> false.
+```
+
+Getters and setters.
+
+```javascript
 // getters & setters
 
 let d = {
@@ -66,7 +71,6 @@ d.peek; // -> 2
 d.top = 3
 
 d.peek; // -> 3
-
 ```
 
 Shallow copy
