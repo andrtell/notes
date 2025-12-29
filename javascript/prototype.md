@@ -37,7 +37,7 @@ function C() {
     this.y = 1;
 } 
 
-let d = new C();
+let d = new C(); // constructor call with new.
 
 Object.getPrototypeOf(d) === C.prototype; // -> true
 
