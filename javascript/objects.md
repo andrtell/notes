@@ -82,6 +82,8 @@ for (let k in f) {   // iterates over enumerable properties
 v; // -> [1, 2];
 ```
 
+See: Arrays and iterators (todo).
+
 Shallow copy.
 
 ```javascript
