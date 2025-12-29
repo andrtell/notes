@@ -22,5 +22,7 @@ Object.getPrototypeOf(a) == Object.prototype; // -> true
 ```
 
 ```
-
+──> b
+    └─ [[prototype]] ──> a
+                         └─ [[prototype]] ──> Object.prototype
 ```
