@@ -11,6 +11,10 @@ MDN
 >
 > [set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
+__Notes__
+
+[Prototypes](./prototype.md)
+
 __Objects__
 
 Create.
