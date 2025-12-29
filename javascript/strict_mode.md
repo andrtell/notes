@@ -5,12 +5,12 @@ __Links__
 MDN
 > [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 
-__Browser__
+__Notes__
+
+[Modules](./modules.md) (always strict).
+
+# Strict mode
 
 ```javascript
 "use strict"; // put before any other statement.
 ```
-
-__Notes__
-
-[Modules](./modules.md) are always `strict`.
