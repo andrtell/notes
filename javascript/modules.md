@@ -5,6 +5,10 @@ __Links__
 MDN
 > [Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
+__Notes__
+
+[Classic scripts](./classic_scripts.md)
+
 # Modules
 
 __Browser__
