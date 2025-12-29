@@ -6,6 +6,10 @@ MDN
 > [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 >
 > [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone)
+>
+> [get](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
+>
+> [set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
 __Objects__
 
