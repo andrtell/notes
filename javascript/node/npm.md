@@ -1,4 +1,4 @@
-[Top](../javascript.md)
+[Top](../../javascript.md)
 
 __Links__
 
