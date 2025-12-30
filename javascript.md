@@ -15,6 +15,9 @@ MDN
 >
 > [JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
+V8
+> [V8 home](https://v8.dev/)
+
 __Notes__
 
 ["strict mode"](./javascript/strict_mode.md)
