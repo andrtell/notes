@@ -1,5 +1,9 @@
 [Top](../../javascript.md)
 
+__Links__
+
+Node JS
+> [Debugging](https://nodejs.org/en/learn/getting-started/debugging)
 
 # Debug using CLI
 
