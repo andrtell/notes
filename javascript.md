@@ -27,13 +27,15 @@ V8
 
 NodeJS
 
-> [Install NodeJS](./javascript/install_nodejs.md)
-| [NPM](./javascript/npm.md)
+> [Install Node](./javascript/node/install_node.md)
+| [NPM](./javascript/node/npm.md)
+
+Browser
+> [Classic scripts](./javascript/browser/classic_scripts.md) 
 
 Javascript
 
 > [Modules](./javascript/modules.md) 
-| [Classic scripts](./javascript/classic_scripts.md) 
 | ["use strict"](./javascript/strict_mode.md)
 
 > [Objects](./javascript/objects.md)
