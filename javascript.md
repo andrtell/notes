@@ -23,20 +23,16 @@ V8
 
 __Notes__
 
-[Install NodeJS](./javascript/install_nodejs.md)
+> [Install NodeJS](./javascript/install_nodejs.md)
 
-["strict mode"](./javascript/strict_mode.md)
+> [Modules](./javascript/modules.md) 
+| [Classic scripts](./javascript/classic_scripts.md) 
+| ["strict mode"](./javascript/strict_mode.md)
 
-[Classic scripts](./javascript/classic_scripts.md) 
+> [Objects](./javascript/objects.md)
+| [Prototypes](./javascript/prototype.md)
+| [This](./javascript/this.md)
 
-[Modules](./javascript/modules.md) 
-
-[this](./javascript/this.md)
-
-[Objects](./javascript/objects.md)
-
-[Prototype](./javascript/prototype.md)
-
-[Iterators](./javascript/iterators.md)
+> [Iterators](./javascript/iterators.md)
 
 
