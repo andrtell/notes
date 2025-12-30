@@ -1,6 +1,6 @@
 [Top](../../javascript.md)
 
-# Inspect using Chrome
+# Debug using Chrome
 
 Start node in inspect mode.
 
