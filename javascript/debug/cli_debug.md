@@ -1,7 +1,7 @@
 [Top](../debug.md)
 
 
-# CLI Debug
+# CLI Debugger
 
 ```javascript
 // a.js
@@ -64,6 +64,14 @@ Watchers:
   6
 
 debug> unwatch("x")
+```
+
+`repl`
+```sh
+debug> repl
+Press Ctrl+C to leave debug repl
+> x
+2
 ```
 
 `exec`
