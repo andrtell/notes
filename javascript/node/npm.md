@@ -5,7 +5,7 @@ __Links__
 NPM
 > [NPM Docs](https://docs.npmjs.com/)
 
-NodeJS
+Node
 > [NPM intro](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
 
 
