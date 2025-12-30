@@ -41,3 +41,5 @@ __Notes__
 [Prototype](./javascript/prototype.md)
 
 [Iterators](./javascript/iterators.md)
+
+[Install NodeJS](./javascript/install_nodejs.md)
