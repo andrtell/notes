@@ -6,7 +6,7 @@ __Links__
 
 [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
-__Bash__
+# Install NodeJS
 
 ```bash
 # Download and install nvm:
