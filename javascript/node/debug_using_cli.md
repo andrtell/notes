@@ -1,7 +1,7 @@
 [Top](../../javascript.md)
 
 
-# CLI Debugger
+# Debug using CLI
 
 ```javascript
 // a.js
