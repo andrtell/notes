@@ -29,7 +29,8 @@ NodeJS
 
 > [Install Node](./javascript/node/install_node.md)
 | [NPM](./javascript/node/npm.md)
-| [CLI Debugger](./javascript/node/cli_debugger.md)
+| [Debug using CLI](./javascript/node/debug_using_cli.md)
+| [Debug using Chrome](./javascript/node/debug_using_chrome.md)
 
 Browser
 > [Classic scripts](./javascript/browser/classic_scripts.md) 
