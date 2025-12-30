@@ -2,9 +2,11 @@
 
 __Links__
 
-[https://nodejs.org/en/download](https://nodejs.org/en/download)
+Node
+> [Download](https://nodejs.org/en/download)
 
-[https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+NVM
+> [NVM](https://github.com/nvm-sh/nvm)
 
 # Install NodeJS
 
