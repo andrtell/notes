@@ -19,7 +19,7 @@ NodeJS
 | [Tutorial](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) 
 
 V8
-> [V8 home](https://v8.dev/)
+> [V8](https://v8.dev/)
 
 __Notes__
 
