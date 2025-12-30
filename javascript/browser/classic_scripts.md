@@ -7,7 +7,7 @@ MDN
 
 __Notes__
 
-[Modules](./modules.md)
+[Modules](../modules.md)
 
 # Classic scripts
 
