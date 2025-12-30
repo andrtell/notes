@@ -45,11 +45,9 @@ debug> next
   5 console.log(x);
 ```
 
-`step`, `out`
+`step`, `out`, `backtrace`
 
 ```sh
-debug> next
-
   1 let x = 1;
   2
   3 x = x + 1;
@@ -65,6 +63,12 @@ step in node:internal/console/constructor:413
  414       onLog.publish(args);
  415     }
 
+debug> backtrace
+
+#0 log node:internal/console/constructor:413:4
+#1 (anonymous) a.js:5:8
+#2 (anonymous) node:internal/modules/cjs/loader:1758:13
+
 debug> out
 
   3 x = x + 1;
@@ -73,9 +77,36 @@ debug> out
   6
 ```
 
+`cont`, `setBreakpoint`, `clearBreakpoint`, `breakpoints`
 
+```sh
+debug> setBreakpoint('a.js', 5)
 
+debug> breakpoints
+#0 a.js:5
 
+debug> cont
+
+  3 x = x + 1;
+  4
+> 5 console.log(x);
+  6
+
+debug> clearBreakpoint('a.js', 5)
+
+debug> breakpoints
+No breakpoints yet
+```
+
+`restart`
+
+```sh
+debug> restart
+
+> 1 let x = 1;
+  2
+  3 x = x + 1;
+```
 
 `watch`, `unwatch`, `watchers`
 
@@ -111,37 +142,6 @@ Press Ctrl+C to leave debug repl
 ```sh
 debug> exec("x + 1")
 3
-```
-
-`restart`
-
-```sh
-debug> restart
-
-> 1 let x = 1;
-  2
-  3 x = x + 1;
-```
-
-`cont`, `setBreakpoint`, `clearBreakpoint`, `breakpoints`
-
-```sh
-debug> setBreakpoint('a.js', 5)
-
-debug> breakpoints
-#0 a.js:5
-
-debug> cont
-
-  3 x = x + 1;
-  4
-> 5 console.log(x);
-  6
-
-debug> clearBreakpoint('a.js', 5)
-
-debug> breakpoints
-No breakpoints yet
 ```
 
 `.exit`
