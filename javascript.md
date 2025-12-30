@@ -23,6 +23,8 @@ V8
 
 __Notes__
 
+[Install NodeJS](./javascript/install_nodejs.md)
+
 ["strict mode"](./javascript/strict_mode.md)
 
 [Classic scripts](./javascript/classic_scripts.md) 
@@ -37,4 +39,4 @@ __Notes__
 
 [Iterators](./javascript/iterators.md)
 
-[Install NodeJS](./javascript/install_nodejs.md)
+
