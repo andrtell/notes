@@ -20,6 +20,19 @@ $ node inspect a.js
   3 x = x + 1;
 ```
 
+`list`
+
+```sh
+debug> list()
+
+> 1 let x = 1;
+  2
+  3 x = x + 1;
+  4
+  5 console.log(x);
+  6
+```
+
 `next`
 
 ```sh
@@ -32,18 +45,37 @@ debug> next
   5 console.log(x);
 ```
 
-`list`
+`step`, `out`
 
 ```sh
-debug> list()
+debug> next
 
   1 let x = 1;
   2
-> 3 x = x + 1;
+  3 x = x + 1;
   4
-  5 console.log(x);
+> 5 console.log(x);
+
+debug> step
+
+step in node:internal/console/constructor:413
+ 411 const consoleMethods = {
+ 412   log(...args) {
+> 413     if (onLog.hasSubscribers) {
+ 414       onLog.publish(args);
+ 415     }
+
+debug> out
+
+  3 x = x + 1;
+  4
+> 5 console.log(x);
   6
 ```
+
+
+
+
 
 `watch`, `unwatch`, `watchers`
 
@@ -63,7 +95,7 @@ Watchers:
 > 5 console.log(x);
   6
 
-debug> unwatch("x")
+debug> unwatch(0)
 ```
 
 `repl`
