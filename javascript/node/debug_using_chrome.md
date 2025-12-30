@@ -2,7 +2,7 @@
 
 __Links__
 
-Node JS
+Node
 > [Debugging](https://nodejs.org/en/learn/getting-started/debugging)
 
 # Debug using Chrome
