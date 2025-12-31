@@ -24,7 +24,7 @@ a = Array.of(1, 3, 7);
 
 ```
 
-Length
+`.length`
 
 ```javascript
 let b = [];
@@ -62,11 +62,7 @@ b[0]; // -> undefined
 
 
 ```javascript
-let c = [1,,3];
-
-c; // -> [ 1, <1 empty item>, 3 ]
-
-let v = [];
+let v = [], c = [1,,3];
 
 for (let i = 0; i < c.length; i++) {
     v.push(c[i]);
