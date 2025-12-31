@@ -100,7 +100,7 @@ v; // [1, 3]
 ```javascript
 let f = [1,,3]; // [1, <1 empty item>, 3]
 
-f.map((val, _idx, _f) => val, this); //  [1, <1 empty item>, 3]
+f.map((val, _idx, _f) => val, _this); //  [1, <1 empty item>, 3]
 ```
 
 `.filter`
@@ -108,7 +108,7 @@ f.map((val, _idx, _f) => val, this); //  [1, <1 empty item>, 3]
 ```javascript
 let g = [1,,3]; // [1, <1 empty item>, 3]
 
-g.filter((val, _idx, _g) => true, this); // -> [1, 3]
+g.filter((val, _idx, _g) => true, _this); // -> [1, 3]
 ```
 
 `.reduce`
@@ -116,7 +116,7 @@ g.filter((val, _idx, _g) => true, this); // -> [1, 3]
 ```javascript
 let h = [1,,3]; // [1, <1 empty item>, 3]
 
-h.reduce((acc, val, idx, h) => { acc.push(val); return acc }, []); // [1, 3]
+h.reduce((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [1, 3]
 
 h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 ```
@@ -126,7 +126,7 @@ h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 ```javascript
 let i = [1,,3]; // [1, <1 empty item>, 3]
 
-i.some((val, idx, e) => val == 3, this); // true 
+i.some((val, _idx, _i) => val == 3, _this); // true 
 ```
 
 `.every`
@@ -134,7 +134,7 @@ i.some((val, idx, e) => val == 3, this); // true
 ```javascript
 let j = [1,,3]; // [1, <1 empty item>, 3]
 
-j.every((val, idx, e) => val == 3, this); // false 
+j.every((val, _idx, _j) => val == 3, _this); // false 
 ```
 
 Search
