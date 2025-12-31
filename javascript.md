@@ -1,27 +1,5 @@
 [Top](README.md)
 
-__Links__
-
-ECMAScript
-> [Language Specification](https://tc39.es/ecma262/) | [Proposals](https://github.com/tc39/proposals)
-
-
-MDN
-> [MDN](https://developer.mozilla.org)
-| [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-| [JS Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-| [JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-
-
-NodeJS
-> [NodeJS](https://nodejs.org/en)
-| [Docs](https://nodejs.org/docs/latest/api/)
-| [Tutorial](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
-
-> [node.green](https://node.green/)
-
-V8
-> [V8](https://v8.dev/)
 
 # Javascript
 
@@ -46,4 +24,26 @@ Language
 
 > [Iterators](./javascript/iterators.md)
 
+## __Links__
+
+ECMAScript
+> [Language Specification](https://tc39.es/ecma262/) | [Proposals](https://github.com/tc39/proposals)
+
+
+MDN
+> [MDN](https://developer.mozilla.org)
+| [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+| [JS Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+| [JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+
+NodeJS
+> [NodeJS](https://nodejs.org/en)
+| [Docs](https://nodejs.org/docs/latest/api/)
+| [Tutorial](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+
+> [node.green](https://node.green/)
+
+V8
+> [V8](https://v8.dev/)
 
