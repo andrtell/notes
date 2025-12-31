@@ -8,7 +8,7 @@ Node
 NVM
 > [NVM](https://github.com/nvm-sh/nvm)
 
-# Install NodeJS
+# Install Node
 
 ```bash
 # Download and install nvm:
