@@ -32,6 +32,42 @@ a.at(-1); // 7
 
 ```
 
+`for`
+
+```javascript
+let v = [], c = [1,,3]; // [1, <1 empty item>, 3] 
+
+for (let i = 0; i < c.length; i++) {
+    v.push(c[i]);
+}
+
+v; // [1, undefined, 3];
+```
+
+`for .. of`
+
+```javascript
+let v = [], d = [1,,3]; // [1, <1 empty item>, 3]
+
+for (const val of d) {
+    v.push(val);    
+}
+
+v; // [1, undefined, 3];
+```
+
+`.forEach()`
+
+```javascript
+let v = [], e = [1,,3]; // [1, <1 empty item>, 3]
+
+e.forEach((val, _idx, _e) => {
+    v.push(val);
+});
+
+v; // [1, 3]
+```
+
 `.length`
 
 ```javascript
@@ -92,8 +128,33 @@ y; // [3, 4]
 
 ```
 
-`.splice()`, `.toSpliced()`
+`.with()`
 
+```javascript
+let w = ['a', 'b', 'c'];
+
+w.with(1, 'X'); // ['a', 'X', 'c'];
+```
+
+`.slice()`
+
+```javascript
+let z = ['a', 'b', 'c', 'd'];
+
+z.slice(); // ['a', 'b', 'c', 'd']
+
+z.slice(2); // ['c', 'd']
+
+z.slice(2, 3); // ['c'], non-inclusive end 
+
+z.slice(-2); // ['c', 'd']
+
+z.slice(2, -1); // ['c'], non-inclusive end
+
+z; // ['a', 'b', 'c', 'd']
+```
+
+`.splice()`, `.toSpliced()`
 
 ```javascript
 let y = ['a', 'b', 'c'];
@@ -117,68 +178,6 @@ y; // ['a', 'b', 'c']
 y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd'] 
 
 y; // ['a', 'b', 'c']
-```
-
-`.with()`
-
-```javascript
-let w = ['a', 'b', 'c'];
-
-w.with(1, 'X'); // ['a', 'X', 'c'];
-```
-
-`for`
-
-```javascript
-let v = [], c = [1,,3]; // [1, <1 empty item>, 3] 
-
-for (let i = 0; i < c.length; i++) {
-    v.push(c[i]);
-}
-
-v; // [1, undefined, 3];
-```
-
-`for .. of`
-
-```javascript
-let v = [], d = [1,,3]; // [1, <1 empty item>, 3]
-
-for (const val of d) {
-    v.push(val);    
-}
-
-v; // [1, undefined, 3];
-```
-
-`.forEach()`
-
-```javascript
-let v = [], e = [1,,3]; // [1, <1 empty item>, 3]
-
-e.forEach((val, _idx, _e) => {
-    v.push(val);
-});
-
-v; // [1, 3]
-```
-
-`.slice()`
-
-```javascript
-let z = ['a', 'b', 'c', 'd'];
-
-z.slice(); // ['a', 'b', 'c', 'd']
-
-z.slice(2); // ['c', 'd']
-
-z.slice(2, 3); // ['c'], non-inclusive end 
-
-z.slice(-2); // ['c', 'd']
-
-z.slice(2, -1); // ['c'], non-inclusive end
-
-z; // ['a', 'b', 'c', 'd']
 ```
 
 `.sort()`, `.toSorted()`
