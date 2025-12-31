@@ -218,12 +218,32 @@ u.toReversed(); // [1, 2, 3]
 u; // [3, 2, 1]
 ```
 
+`.flat()`
+
+```javascript
+let w = [1, [2, [3, 4]];
+
+w.flat(); // [1, 2, [3, 4]]
+
+w.flat(2); // [1, 2, 3, 4] 
+
+w.flat(Infinity); // [1, 2, 3, 4]
+```
+
 `.map()`
 
 ```javascript
 let f = [1,,3]; // [1, <1 empty item>, 3]
 
 f.map((val, _idx, _f) => val, _this); //  [1, <1 empty item>, 3]
+```
+
+`.flatMap()`
+
+```javascript
+let v = [1, [2, [3, 4]]]; // [1, <1 empty item>, 3]
+
+v.flatMap((val, _idx, _v) => val * 11, _this);  // [11, NaN]
 ```
 
 `.filter()`
