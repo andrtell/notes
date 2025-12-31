@@ -27,6 +27,8 @@ b.x; // -> 1
 
 b.hasOwnProperty("x"); // -> false
 
+Object.hasOwn(b, "x"); // -> false
+
 ("x" in b); // -> true
 
 a.isPrototypeOf(b); // -> true
@@ -56,6 +58,8 @@ Object.getPrototypeOf(d) === C.prototype; // -> true
 d.y; // -> 1
 
 d.hasOwnProperty("y"); // -> true
+
+Object.hasOwn(d, "y"); // -> true
 
 ("y" in d); // -> true
 
