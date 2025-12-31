@@ -119,6 +119,14 @@ y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd']
 y; // ['a', 'b', 'c']
 ```
 
+`.with`
+
+```javascript
+let w = ['a', 'b', 'c'];
+
+w.with(1, 'X'); // ['a', 'X', 'c'];
+```
+
 `for`
 
 ```javascript
@@ -187,6 +195,20 @@ let y = [3, 11, 7, 1];
 y.toSorted(); // [1, 3, 7, 11]
 
 y; // [3, 11, 7, 1]
+```
+
+`.reverse()`, `.toReversed`
+
+```javascript
+let u = [1, 2, 3];
+
+u.reverse(); // u
+
+u; // [3, 2, 1]
+
+u.toReversed(); // [1, 2, 3]
+
+u; // [3, 2, 1]
 ```
 
 `.map`
