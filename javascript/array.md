@@ -7,7 +7,7 @@ MDN
 
 # Arrays
 
-Empty
+Create
 
 ```javascript
 let a = [];
@@ -17,6 +17,11 @@ a = new Array();
 a = Array();
 
 a = Array.of();
+
+a = [1, 3, 7];
+
+a = Array.of(1, 3, 7);
+
 ```
 
 Length
@@ -115,13 +120,13 @@ Search
 ```javascript
 let f = [1,,3, 11, 3];
 
-f.find((val, idx, f) => val == 3, this); // -> 3
+f.indexOf(3); // -> 2
 
-f.find((val, idx, f) => val == 17, this); // -> undefined
+f.indexOf(17); // -> -1
 
-f.findLast((val, idx, f) => val == 3, this); // -> 3
+f.lastIndexOf(3); // -> 4
 
-f.findLast((val, idx, f) => val == 17, this); // -> undefined
+f.lastIndexOf(17); // -> -1
 
 f.findIndex((val, idx, f) => val == 3, this); // -> 2
 
@@ -130,6 +135,14 @@ f.findIndex((val, idx, f) => val == 17, this); // -> -1
 f.findLastIndex((val, idx, f) => val == 3, this); // -> 4
 
 f.findLastIndex((val, idx, f) => val == 17, this); // -> -1
+
+f.find((val, idx, f) => val == 3, this); // -> 3
+
+f.find((val, idx, f) => val == 17, this); // -> undefined
+
+f.findLast((val, idx, f) => val == 3, this); // -> 3
+
+f.findLast((val, idx, f) => val == 17, this); // -> undefined
 ```
 
 
