@@ -137,34 +137,48 @@ let j = [1,,3]; // [1, <1 empty item>, 3]
 j.every((val, _idx, _j) => val == 3, _this); // false 
 ```
 
-Search
+`.indexOf`, `.lastIndexOf`
 
 ```javascript
-let f = [1,,3, 11, 3];
+let k = [1,,3, 11, 3]; // [1, <1 empty item>, 3, 11, 3]
 
-f.indexOf(3); // -> 2
+k.indexOf(3); // 2
 
-f.indexOf(17); // -> -1
+k.indexOf(17); // -1
 
-f.lastIndexOf(3); // -> 4
+k.lastIndexOf(3); // 4
 
-f.lastIndexOf(17); // -> -1
+k.lastIndexOf(17); // -1
+```
 
-f.findIndex((val, idx, f) => val == 3, this); // -> 2
+`.findIndex`, `.findLastIndex`
 
-f.findIndex((val, idx, f) => val == 17, this); // -> -1
+```javascript
 
-f.findLastIndex((val, idx, f) => val == 3, this); // -> 4
+let l = [1,,3, 11, 3]; // [1, <1 empty item>, 3, 11, 3]
 
-f.findLastIndex((val, idx, f) => val == 17, this); // -> -1
+l.findIndex((val, _idx, _l) => val == 3, _this); // 2
 
-f.find((val, idx, f) => val == 3, this); // -> 3
+l.findIndex((val, _idx, _l) => val == 17, _this); // -1
 
-f.find((val, idx, f) => val == 17, this); // -> undefined
+l.findLastIndex((val, _idx, _l) => val == 3, _this); // 4
 
-f.findLast((val, idx, f) => val == 3, this); // -> 3
+l.findLastIndex((val, _idx, _l) => val == 17, _this); // -1
 
-f.findLast((val, idx, f) => val == 17, this); // -> undefined
+```
+
+`.find`, `.findLast`
+
+```javascript
+let m = [1,,3, 11, 3]; // [1, <1 empty item>, 3, 11, 3]
+
+m.find((val, _idx, _m) => val == 3, _this); // 3
+
+m.find((val, _idx, _m) => val == 17, _this); // undefined
+
+m.findLast((val, _idx, _m) => val == 3, _this); // 3
+
+m.findLast((val, _idx, _m) => val == 17, _this); // undefined
 ```
 
 
