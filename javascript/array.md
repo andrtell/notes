@@ -113,15 +113,23 @@ e.every((val, idx, e) => val == 3, this); // -> false
 Search
 
 ```javascript
-let f = [1,,3];
+let f = [1,,3, 11, 3];
 
 f.find((val, idx, f) => val == 3, this); // -> 3
 
-f.find((val, idx, f) => val == 7, this); // -> undefined
+f.find((val, idx, f) => val == 17, this); // -> undefined
+
+f.findLast((val, idx, f) => val == 3, this); // -> 3
+
+f.findLast((val, idx, f) => val == 17, this); // -> undefined
 
 f.findIndex((val, idx, f) => val == 3, this); // -> 2
 
-f.findIndex((val, idx, f) => val == 7, this); // -> -1
+f.findIndex((val, idx, f) => val == 17, this); // -> -1
+
+f.findLastIndex((val, idx, f) => val == 3, this); // -> 4
+
+f.findLastIndex((val, idx, f) => val == 17, this); // -> -1
 ```
 
 
