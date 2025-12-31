@@ -170,7 +170,7 @@ y.splice(1, 2); // ['m', 'n']
 y; // ['a', 'b', 'c']
 ```
 
-`.sort()`, `.toSorted()`
+`.sort()`
 
 ```javascript
 let z = [3, 11, 7, 1];
@@ -186,7 +186,7 @@ y.toSorted(); // [1, 3, 7, 11]
 y; // [3, 11, 7, 1]
 ```
 
-`.reverse()`, `.toReversed()`
+`.reverse()`
 
 ```javascript
 let u = [1, 2, 3];
@@ -199,6 +199,7 @@ u.toReversed(); // [1, 2, 3]
 
 u; // [3, 2, 1]
 ```
+
 
 Transform
 
@@ -234,9 +235,30 @@ h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 
 ```javascript
 // immutable version of .splice()
+
 let y = ['a', 'b', 'c'];
 
 y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd'] 
+```
+
+`.toSorted()`
+
+```javascript
+// immutable version of .sort()
+
+y.toSorted(); // [1, 3, 7, 11]
+
+y; // [3, 11, 7, 1]
+```
+
+`.toReversed()`
+
+```javascript
+// immutable version of .reverse()
+
+u.toReversed(); // [1, 2, 3]
+
+u; // [3, 2, 1]
 ```
 
 `.flat()`
