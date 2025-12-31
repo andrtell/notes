@@ -94,7 +94,6 @@ y; // [3, 4]
 
 `for`
 
-
 ```javascript
 let v = [], c = [1,,3]; // [1, <1 empty item>, 3] 
 
@@ -127,6 +126,24 @@ e.forEach((val, _idx, _e) => {
 });
 
 v; // [1, 3]
+```
+
+`.slice`
+
+```javascript
+let z = ['a', 'b', 'c', 'd'];
+
+z.slice(); // ['a', 'b', 'c', 'd']
+
+z.slice(2); // ['c', 'd']
+
+z.slice(2, 3); // ['c'], non-inclusive end 
+
+z.slice(-2); // ['c', 'd']
+
+z.slice(2, -1); // ['c'], non-inclusive end
+
+z; // ['a', 'b', 'c', 'd']
 ```
 
 `.sort`, `.toSorted`
