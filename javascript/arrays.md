@@ -7,7 +7,7 @@ MDN
 
 # Arrays
 
-Create
+__Create__
 
 `[]`, `Array`, `.of()`
 
@@ -25,7 +25,7 @@ a = [1, 3, 7];
 a = Array.of(1, 3, 7); // [1, 3, 7]
 ```
 
-Access
+__Access__
 
 `[]`, `.at()`
 
@@ -44,7 +44,7 @@ a.at(99); // undefined
 
 ```
 
-Iterate
+__Iterate__
 
 `for`
 
@@ -82,7 +82,7 @@ e.forEach((val, _idx, _e) => {
 v; // [1, 3]
 ```
 
-Length
+__Length__
 
 `.length`
 
@@ -110,7 +110,7 @@ delete b[1]; // b is [1, <1 empty item>, 3]
 b[1]; // undefined
 ```
 
-Combine
+__Combine__
 
 `.concat()`
 
@@ -124,7 +124,7 @@ y; // [3, 4]
 
 ```
 
-Mutate
+__Mutate__
 
 `.pop()`, `.push()`, `.shift()`, `.unshift()`
 
@@ -200,8 +200,7 @@ u.toReversed(); // [1, 2, 3]
 u; // [3, 2, 1]
 ```
 
-
-Transform
+__Transform__
 
 `.with()`
 
@@ -234,7 +233,7 @@ h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 `.toSpliced()`
 
 ```javascript
-// immutable version of .splice()
+// analog to  .splice()
 
 let y = ['a', 'b', 'c'];
 
@@ -244,7 +243,7 @@ y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd']
 `.toSorted()`
 
 ```javascript
-// immutable version of .sort()
+// analog to .sort()
 
 y.toSorted(); // [1, 3, 7, 11]
 
@@ -254,7 +253,7 @@ y; // [3, 11, 7, 1]
 `.toReversed()`
 
 ```javascript
-// immutable version of .reverse()
+// analog to .reverse()
 
 u.toReversed(); // [1, 2, 3]
 
@@ -283,7 +282,7 @@ v.flatMap((val, _idx, _v) => val * 11, _this);  // [11, NaN]
 // eq. to .map().flat()
 ```
 
-Select
+__Select__
 
 `.filter()`
 
@@ -311,7 +310,7 @@ z.slice(2, -1); // ['c'], non-inclusive end
 z; // ['a', 'b', 'c', 'd']
 ```
 
-Test
+__Test__
 
 `.includes()`
 
@@ -339,7 +338,7 @@ let j = [1,,3]; // [1, <1 empty item>, 3]
 j.every((val, _idx, _j) => val == 3, _this); // false 
 ```
 
-Search
+__Search__
 
 `.indexOf()`, `.lastIndexOf()`
 
