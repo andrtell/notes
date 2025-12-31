@@ -58,7 +58,7 @@ b; // -> [ <3 empty items> ]
 b[0]; // -> undefined
 ```
 
-Iterate
+`for`
 
 
 ```javascript
@@ -73,6 +73,12 @@ for (let i = 0; i < c.length; i++) {
 }
 
 v; // -> [1, undefined, 3];
+```
+
+`for .. of`
+
+```javascript
+let d = [1,,3];
 
 v = [];
 
@@ -81,7 +87,11 @@ for (const val of c) {
 }
 
 v; // -> [1, undefined, 3];
+```
 
+`.forEach`
+
+```javascript
 v = [];
 
 c.forEach((val, idx, c) => {
