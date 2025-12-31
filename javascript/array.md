@@ -7,7 +7,7 @@ MDN
 
 # Arrays
 
-Create
+`[]`, `Array`, `.of`, `.at`
 
 ```javascript
 let a = [];
@@ -21,6 +21,14 @@ a = Array.of();
 a = [1, 3, 7];
 
 a = Array.of(1, 3, 7);
+
+a[0]; // 1
+
+a[99]; // undefined
+
+a.at(0); // 1 
+
+a.at(-1); // 7
 
 ```
 
