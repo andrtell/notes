@@ -39,29 +39,17 @@ let b = [];
 
 b.length; // 0
 
-b.length = 3;
+b.length = 3; // b is [<3 empty items>]
 
-b; // [<3 empty items>]
+b[1] = 7; // b is [ <1 empty item>, 7, <1 empty item> ]
 
-b[1] = 7; 
+b.length = 0; // b is []
 
-b; // [ <1 empty item>, 7, <1 empty item> ]
+b[2] = 7; // b is [ <2 empty items>, 7]
 
-b.length = 0;
+b = [,,7]; // b is [ <2 empty items>, 7]
 
-b; // []
-
-b[2] = 7;
-
-b; // [ <2 empty items>, 7]
-
-b = [,,7];
-
-b; // [ <2 empty items>, 7]
-
-delete b[2];
-
-b; // [ <3 empty items> ]
+delete b[2]; // b is [ <3 empty items> ]
 
 b[0]; // undefined
 ```
@@ -75,7 +63,7 @@ z.pop(); // 11
 
 z; // [1, 3, 7]
 
-z.push(11); // 4 = new .length
+z.push(11); // 4 ~ .length
 
 z; // [1, 3, 7, 11]
 
@@ -83,7 +71,7 @@ z.shift(); // 1
 
 z; // [3, 7 ,11]
 
-z.unshift(1); // 4 = new .length
+z.unshift(1); // 4 ~ .length
 
 z; // [1, 3, 7, 11]
 ```
