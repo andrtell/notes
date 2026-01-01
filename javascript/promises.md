@@ -13,13 +13,13 @@ const f = setTimeout, g = setTimeout;
 
 ```javascript
 f(
-    function() { // callback
-        g(
-            function() { // callback
-
-            }
-        )
-    }
+  function() {
+    g(
+      function() {
+        // ...
+      }
+    )
+  }
 );
 ```
 
