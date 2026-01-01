@@ -99,11 +99,11 @@ w.then(
 
 ```javascript
 let a = function () {
-  return new Promise(function(resolve) { f(resolve); });
+  return new Promise(function executor(resolve) { f(resolve); });
 }
 
 let b = function () {
-  return new Promise(function(resolve) { g(resolve); });
+  return new Promise(function executor(resolve) { g(resolve); });
 }
 ```
 
