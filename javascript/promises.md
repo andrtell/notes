@@ -47,27 +47,28 @@ p.then(
 
 
 ```javascript
-let p1 = new Promise(
-    function executor(resolve) {
-        f(resolve);
-    }
+let q = new Promise(
+  function executor(resolve) {
+    f(resolve);
+  }
 );
 
-p1.then(
-    function () {
-        let p2 = new Promise(
-            function executor(resolve) {
-                g(resolve);
-            }
-        );
+q.then(
+  function () {
+    let r = new Promise(
+      function executor(resolve) {
+        g(resolve);
+      }
+    );
 
-        p2.then(
-            function() {
-
-            }
-        )
-    }
+    r.then(
+      function() {
+        // ...
+      }
+    )
+  }
 )
+
 ```
 
 ```javascript
