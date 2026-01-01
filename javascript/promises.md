@@ -25,7 +25,7 @@ f(
 
 ```javascript
 let p = new Promise(
-  function executor0(resolve) {
+  function executor(resolve) {
     f(
       function() {
         g(
