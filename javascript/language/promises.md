@@ -26,13 +26,15 @@ f(
 ```
 
 ```javascript
-let p = new Promise( // p is pending.
+let p = new Promise( // p is 'pending'.
   function executor(resolve) { // runs immediately.
     f(
       function() {
         g(
           function() {
-            resolve(); // p becomes 'fulfilled' when resolve() is called.
+            resolve(); // p becomes 'resolved' when resolve() is called.
+                       // p becomes 'fulfilled' if resolve() is called with a non-promise (implicit 'undefined' here).
+                       // p remains 'pending' if resolve() is called with a promise.
           }
         )
       }
