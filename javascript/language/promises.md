@@ -27,14 +27,13 @@ f(
 
 ```javascript
 let p = new Promise( // p is 'pending'.
-  function executor(resolve) { // runs immediately.
+  function executor(resolve) { // called synchronously.
     f(
       function() {
         g(
           function() {
-            resolve(); // p becomes 'resolved' when resolve() is called.
-                       // p becomes 'fulfilled' if resolve() is called with a non-promise (implicit 'undefined' here).
-                       // p remains 'pending' if resolve() is called with a promise.
+            // p becomes 'fulfilled' when resolve() is called with a non-promise (implicit 'undefined' here).
+            resolve();     
           }
         )
       }
@@ -43,7 +42,7 @@ let p = new Promise( // p is 'pending'.
 );
 
 p.then( 
-  function() { // queued up, called when p is 'fulfilled'.
+  function() { // queued up synchronously, called when p is 'fulfilled'.
     // ...
   }
 )
@@ -65,7 +64,7 @@ q.then(
       }
     );
 
-    r.then( // nested .then()
+    r.then( // nested .then(), here for completeness.
       function() {
         // ...
       }
