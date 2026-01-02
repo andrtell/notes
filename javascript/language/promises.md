@@ -7,6 +7,8 @@ MDN
 
 # Promises
 
+`new Promise()` is primarily used to wrap callback-based APIs that do not already support promises.
+
 ```javascript
 const f = setTimeout, g = setTimeout;
 ```
