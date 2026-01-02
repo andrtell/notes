@@ -32,7 +32,7 @@ let p = new Promise( // p is 'pending'.
       function cb() {
         g(
           function cb() {
-            // p becomes 'fulfilled' when resolve() is given a non-promise (implicit 'undefined' here).
+            // P becomes 'fulfilled' when resolve() is given a non-promise (implicit 'undefined' here).
             resolve();     
           }
         )
@@ -42,7 +42,7 @@ let p = new Promise( // p is 'pending'.
 );
 
 p.then(
-  // queued up synchronously, called when p is 'fulfilled'.
+  // queued up synchronously, called when P is 'fulfilled'.
   function ok() {
     console.log('p is fulfilled');
   }
@@ -60,7 +60,7 @@ let q = new Promise(
           function executor(resolve) {
             g(
               function cb() {
-                // r becomes 'fulfilled'.     
+                // R becomes 'fulfilled'.     
                 resolve(); 
               }
             )    
@@ -69,7 +69,7 @@ let q = new Promise(
 
         r.then(function ok() { console.log('r is fulfilled'); })
 
-        // q remains 'pending'. q's faith is now tied to that of r.
+        // resolves to promise R. Q remains 'pending'. Q's faith is now tied to that of R.
         resolve(r);   
       }
     );
@@ -94,10 +94,12 @@ let s = a();
 s.then(() => console.log('s is fulfilled'));
 
 let v =
-  s.then(
+  s.then( // .then() always returns a 'pending' promise.
     () => {
       let t = b();
       t.then(() => console.log('t is fulfilled'))
+
+      // V's faith is now tied to that of T.
       return t;
     }
 );
@@ -110,12 +112,14 @@ v.then(() => console.log('v is fulfilled'));
 ```
 
 ```javascript
-a().then(b).then(function () { /* ... */ });
+// less noise
+
+a().then(b).then(() => { /* ... */ });
 ```
 
 ```javascript
+// using await
+
 await a();
 await b();
-
-// ...
 ```
