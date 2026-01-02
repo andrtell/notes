@@ -82,79 +82,31 @@ q.then(function ok() { console.log('q is fulfilled'); })
 // q is fulfilled
 ```
 
-
-
 ```javascript
-let q = new Promise(
-  function executor(resolve) {
-    f(resolve);
-  }
-);
+let a = () => new Promise((resolve) => f(resolve));
 
-q.then( 
-  function () {
-    let r = new Promise(
-      function executor(resolve) {
-        g(resolve);
-      }
-    );
-
-    r.then( // nested .then(), here for completeness.
-      function() {
-        // ...
-      }
-    )
-  }
-)
-
+let b = () => new Promise((resolve) => g(resolve));
 ```
 
 ```javascript
-let u = new Promise(
-  function executor(resolve) {
-    f(resolve);
-  }
+let s = a();
+
+s.then(() => console.log('s is fulfilled'));
+
+let v =
+  s.then(
+    () => {
+      let t = b();
+      t.then(() => console.log('t is fulfilled'))
+      return t;
+    }
 );
 
-let w = u.then(
-  function () {
-    let v = new Promise(
-      function executor(resolve) {
-        g(resolve);
-      }
-    );
+v.then(() => console.log('v is fulfilled'));
 
-    return v;
-  }
-)
-
-w.then(
-  function () {
-    // ...
-  }
-);
-```
-
-```javascript
-let a = function () {
-  return new Promise(function executor(resolve) { f(resolve); });
-}
-
-let b = function () {
-  return new Promise(function executor(resolve) { g(resolve); });
-}
-```
-
-```javascript
-a().then(
-  function() {
-    return b();
-  }
-).then(
-  function() {
-    // ...
-  }
-);
+// s is fulfilled
+// t is fulfilled
+// v is fulfilled
 ```
 
 ```javascript
