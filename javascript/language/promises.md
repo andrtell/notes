@@ -84,8 +84,6 @@ q.then(function ok() { console.log('q is fulfilled'); })
 
 ```javascript
 let a = () => new Promise((resolve) => f(resolve));
-
-let b = () => new Promise((resolve) => g(resolve));
 ```
 
 ```javascript
@@ -96,7 +94,7 @@ s.then(() => console.log('s is fulfilled'));
 let v =
   s.then( // .then() always returns a 'pending' promise.
     () => {
-      let t = b();
+      let t = a();
       t.then(() => console.log('t is fulfilled'))
 
       // promise T returned. V's faith is now tied to that of T.
@@ -129,23 +127,20 @@ let c = () => new Promise((_resolve, reject) => f(reject));
 ```
 
 ```javascript
-let p = c();
+let p = Promise.reject();
 
-p.catch(() => console.log('p is rejected');
-
-// p is rejected
+p.catch(() => {}); // eq. to p.then(undefined, () => {});
 ```
 
 ```javascript
 let q = a();
-let r = q.then(c);
 
-q.then(() => console.log('q is fulfilled'));
+let v = q.then(c, undefined); // v will settle to that of c() (rejected). 
+                              // v has no rejection handler, will forward any rejection.
 
-r.catch(() => console.log('r is rejected'));
-
-// q is fulfilled
-// r is rejected
+let x = v.catch(              // x handles rejection.
+  () => console.log("v & x is rejected")
+);
 ```
 
 
