@@ -129,7 +129,7 @@ let c = () => new Promise((_resolve, reject) => f(reject));
 ```javascript
 let p = Promise.reject();
 
-p.catch(() => {}); // eq. to p.then(undefined, () => {});
+p.then(undefined, () => {}); // eq. to p.catch(() => {});
 ```
 
 ```javascript
