@@ -64,8 +64,6 @@ $ npm list
 
 ```
 $ npm uninstall express
-
-$ npm list
 ```
 
 `install --save-dev <package>`
