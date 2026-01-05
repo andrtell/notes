@@ -5,6 +5,8 @@ __Links__
 NPM
 > [Docs](https://docs.npmjs.com/)
 >
+> [package.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json?v=true)
+> 
 > [Package spec](https://docs.npmjs.com/cli/v11/using-npm/package-spec)
 >
 > [Package scope](https://docs.npmjs.com/cli/v11/using-npm/scope)
