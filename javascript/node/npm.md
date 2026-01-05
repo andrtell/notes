@@ -5,7 +5,9 @@ __Links__
 NPM
 > [Docs](https://docs.npmjs.com/)
 >
-> [package-spec](https://docs.npmjs.com/cli/v11/using-npm/package-spec)
+> [Package spec](https://docs.npmjs.com/cli/v11/using-npm/package-spec)
+>
+> [Package scope](https://docs.npmjs.com/cli/v11/using-npm/scope)
 
 Node
 > [NPM intro](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
