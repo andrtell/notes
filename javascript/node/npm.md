@@ -97,6 +97,22 @@ $ npm list -g
 $ npm uninstall -g yo
 ```
 
+`outdated`, `audit`
+
+```sh
+$ npm install express@3
+
+$ npm outdated
+express   3.21.2  3.21.2   5.2.1  node_modules/express
+
+$ npm audit fix --force
+npm warn audit Updating express to 5.2.1, which is a SemVer major change.
+
+$ npm list
+.
+└── express@5.2.1
+```
+
 `update`
 
 ```sh
