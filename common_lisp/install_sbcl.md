@@ -25,6 +25,11 @@ export SBCL_HOME="$HOME/opt/sbcl-2.6.0/lib/sbcl"
 export PATH="$PATH:$HOME/opt/sbcl-2.6.0/bin"
 ```
 
+```sh
+$ sbcl
+*
+```
+
 ## Links
 
 [SBCL](https://www.sbcl.org/)
