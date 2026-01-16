@@ -3,6 +3,7 @@
 # Janet
 
 Janet
+> [Install Janet](./janet/install_janet.md)
 
 
 ## Links
