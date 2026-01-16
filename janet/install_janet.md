@@ -28,6 +28,10 @@ $ sudo make install
 $ sudo make install-jpm-git
 ```
 
+```sh
+$ sudo make install-spork-git
+```
+
 ## User-install
 
 ```
@@ -48,4 +52,20 @@ $ make install
 
 ```sh
 $ make install-jpm-git
+```
+
+```sh
+$ make isntall-spork-git
+```
+
+## Check
+
+```sh
+$ janet --version
+1.41.0-dev-8fe284b5
+```
+
+```sh
+$ janet -L
+spork
 ```
