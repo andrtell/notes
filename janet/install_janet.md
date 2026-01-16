@@ -55,7 +55,7 @@ $ make install-jpm-git
 ```
 
 ```sh
-$ make isntall-spork-git
+$ make install-spork-git
 ```
 
 ## Check
