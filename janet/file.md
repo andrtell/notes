@@ -9,5 +9,5 @@
 (defn read-file! [path]
   (if-with [file (file/open path)]
     (file/read file :all)
-    (error (string "File '" path "' not found"))))
+    (error (string "File '" path "' not found."))))
 ```
