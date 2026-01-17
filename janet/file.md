@@ -1,21 +1,19 @@
 # File
 
 ```janet
-# main.janet
-
 (defn main
   [& args]
+  (var txt "")
   (with [f (file/open "main.janet")]
-    (print (file/read f :all))))
+    (set txt (file/read f :all)))
+  (print txt))
 ```
 
 ```
 $ janet main.janet
 
-# main.janet
-
 (defn main
   [& args]
-  (with [f (file/open "main.janet")]
-    (print (:read f :all))))
+  (var txt "")
+  ...
 ```
