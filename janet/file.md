@@ -6,7 +6,7 @@
 ```
 
 ```janet
-(defn read-file! [path]
+(defn slurp-file! [path]
   (if-with [file (file/open path)]
     (file/read file :all)
     (error (string "File '" path "' not found."))))
