@@ -2,13 +2,15 @@
 
 # Neovim + Janet
 
-```lua
--- ~/.config/nvim/init.lua
+In `~/.config/nvim/init.lua`:
 
+```lua
 vim.pack.add({
  { src = 'https://github.com/Olical/conjure.git' },
 })
 ```
+
+Run spork netrpl.
 
 ```sh
 $ janet -e "(import spork/netrepl) (netrepl/server)"
