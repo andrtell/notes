@@ -15,7 +15,7 @@ Copyright 1984-2025 Cisco Systems, Inc.
 
 __Stop__
 
-To exit the REPL use `exit` or `<CTRL-D>`.
+To exit the REPL call `exit` or type `<CTRL-D>`.
 
 ```
 > (exit)
