@@ -41,7 +41,7 @@ $ scheme --version
 ```
 $ petite --version
 
-0.4.0-pre-release.2
+10.4.0-pre-release.2
 ```
 
 _Would you like to know more?_
