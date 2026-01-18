@@ -20,7 +20,7 @@ $ ./configure
 Configuring for ta6le, and will create boot files via pb
 ```
 
-_Note_: `ta6le` where `t` = threaded, `a6` = AMD64, `le` = little endian.
+_Note_: `ta6le` where `t` = threaded, `a6` = AMD64, `le` = linux.
 
 ```
 $ make
