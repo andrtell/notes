@@ -63,6 +63,12 @@ $ ./run.ss
 Works!
 ```
 
+_Would you like to know more?_
+
+[Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug10.1.0/intro.html) | _Section 1.3_
+
+[Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html) | _Section 2.5_
+
 ## Recipes
 
 __Environment variables__
