@@ -1,4 +1,4 @@
-[Top](../chez.md)
+[Top](../chez.md)  [Prev](./install_chez.md)
 
 # Using Chez
 
