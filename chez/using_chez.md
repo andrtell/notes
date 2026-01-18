@@ -41,3 +41,29 @@ break> r
 
 >
 ```
+
+__Debug__
+
+```
+> (/ 1 0)
+Exception in /: undefined for 0
+
+Type (debug) to enter the debugger.
+
+> (debug)
+
+debug> ?
+
+Type i  to inspect the raise continuation (if available)
+     s  to display the condition
+     c  to inspect the condition
+     e  or eof to exit the debugger, retaining error continuation
+     q  to exit the debugger, discarding error continuation
+
+debug> s
+  Exception in /: undefined for 0
+
+debug> q
+
+>
+```
