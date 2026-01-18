@@ -23,7 +23,7 @@ $ scheme --script run.ss A Z
 This works with the standard shell shebang `#!` notation.
 
 ```scheme
-#!/usr/bin/env -S scheme --script
+#! /usr/bin/env -S scheme --script
 
 (display "Hello\n")
 ```
@@ -40,6 +40,38 @@ Chez ignores the first line of a _loaded_ script if it begins with `#!` followed
 ```
 > (load "hello.ss")
 Hello
+```
+
+Use `scheme --program` instead of `scheme --script` to run the script as an RNRS top-level program.
+
+```
+; top.ss
+
+(import (rnrs))
+(display "Top!")
+(newline)
+```
+
+```
+$ scheme --program top.ss
+
+Top!
+```
+
+As an alternative to `scheme --program` you can use `scheme-script`.
+
+```
+#! /usr/bin/env scheme-script
+
+(import (rnrs))
+(display "Top!")
+(newline)
+```
+
+```
+$ ./top.ss
+
+Top!
 ```
 
 __Environment variables__
