@@ -79,3 +79,7 @@ debug> q
 
 >
 ```
+
+_Would you like to know more?_
+
+[Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html)
