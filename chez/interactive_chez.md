@@ -21,7 +21,7 @@ __Stop__
 > (exit)
 ```
 
-__Load__
+__Load file__
 
 ```
 ; hello.ss
@@ -33,6 +33,18 @@ __Load__
 Hello
 ```
 
+__Load program__
+
+```
+; goodbye.ss
+(import (rnrs))
+(display "Goodbye")
+```
+
+```
+> (load-program "goodbye.ss")
+Goodbye
+```
 __Interrupt__
 
 ```
