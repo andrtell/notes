@@ -21,6 +21,18 @@ __Exit REPL__
 > (exit)
 ```
 
+__Load a file__
+
+```
+; hello.ss
+(display "Hello")
+```
+
+```
+> (load "hello.ss")
+Hello
+```
+
 __Interrupt__
 
 ```
