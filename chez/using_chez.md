@@ -62,8 +62,6 @@ __Debug__
 > (/ 1 0)
 Exception in /: undefined for 0
 
-Type (debug) to enter the debugger.
-
 > (debug)
 
 debug> ?
