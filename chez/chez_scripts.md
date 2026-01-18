@@ -4,7 +4,9 @@
 
 __Basic script__
 
-We can run a program as a shell script using `scheme --script <FILE>`.
+We can run a program as a shell script using `scheme --script <FILE>`. 
+
+The _parameter_ `command-line` becomes available when run as a script.
 
 ```scheme
 ; run.ss
