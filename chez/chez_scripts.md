@@ -12,7 +12,6 @@ The _parameter_ `command-line` becomes available when run as a script.
 ; run.ss
 
 (display (command-line))
-(newline)
 ```
 ```
 $ scheme --script run.ss A Z
@@ -20,7 +19,7 @@ $ scheme --script run.ss A Z
 (run.ss A Z)
 ```
 
-This works with the standard shell shebang `#!` notation.
+Also works with the shell shebang `#!`.
 
 ```scheme
 #! /usr/bin/env -S scheme --script
@@ -42,62 +41,56 @@ Chez ignores the first line of a _loaded_ script if it begins with `#!` followed
 Hello
 ```
 
-Use `scheme --program` instead of `scheme --script` to run the script as an RNRS top-level program.
+To run the script as a RNRS top-level program use `scheme --program`.
 
 ```
-; top.ss
+; run.ss
 
 (import (rnrs))
-(display "Top!")
-(newline)
+(display "Works!")
 ```
 
 ```
-$ scheme --program top.ss
+$ scheme --program run.ss
 
-Top!
+Works!
 ```
 
-As an alternative to `scheme --program` you can use `scheme-script`.
+`scheme-script` may be used in place of `scheme --program`.
 
 ```
 #! /usr/bin/env scheme-script
 
 (import (rnrs))
-(display "Top!")
-(newline)
+(display "Works!")
 ```
 
 ```
-$ ./top.ss
+$ ./run.ss
 
-Top!
+Works!
 ```
 
 __Environment variables__
 
 ```scheme
-; env.ss
-
 (display (getenv "HOME"))
 (newline)
 ```
 
 ```
-$ scheme --script env.ss
+$ scheme --script run.ss
 /home/user
 ```
 
 __Shell commands__
 
 ```scheme
-; shell_command.ss
-
 (system "ls -l")
 ```
 
 ```
-$ scheme --script shell_command.ss
+$ scheme --script run.ss
 
 total 0
 -rw-rw-r-- 1 tell tell 0 Jul 20 00:15 a.ss
