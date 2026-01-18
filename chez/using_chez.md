@@ -21,7 +21,7 @@ __Exit REPL__
 > (exit)
 ```
 
-__Interrupt eval__
+__Interrupt__
 
 ```
 > (let loop () (loop)) ; oh no!
