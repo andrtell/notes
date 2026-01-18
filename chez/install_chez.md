@@ -42,7 +42,7 @@ $ scheme --version
 
 _Would you like to know more?_
 
-[BUILD instructions](https://github.com/cisco/ChezScheme/blob/main/BUILDING)
+[BUILDING](https://github.com/cisco/ChezScheme/blob/main/BUILDING)
 
 
 ## Other
