@@ -63,11 +63,12 @@ $ ./run.ss
 Works!
 ```
 
+## Recipes
+
 __Environment variables__
 
 ```scheme
 (display (getenv "HOME"))
-(newline)
 ```
 
 ```
