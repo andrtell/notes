@@ -44,7 +44,12 @@ $ petite --version
 0.4.0-pre-release.2
 ```
 
-## More
+_Would you like to know more?_
+
+[BUILD instructions](https://github.com/cisco/ChezScheme/blob/main/BUILDING)
+
+
+## Other
 
 __Uninstall__
 
