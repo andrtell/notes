@@ -23,17 +23,22 @@ __Stop__
 
 __Load file__
 
+A program loaded via `load` is scoped at top level, where it can see all top-level bindings.
+
 ```
 ; hello.ss
-(display "Hello")
+(display msg)
 ```
 
 ```
+> (define msg "Hello")
 > (load "hello.ss")
 Hello
 ```
 
 __Load program__
+
+A program loaded via `load-program` can see only the bindings made visible by the leading `import` form.
 
 ```
 ; goodbye.ss
