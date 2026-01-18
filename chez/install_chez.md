@@ -40,12 +40,6 @@ $ scheme --version
 10.4.0-pre-release.2
 ```
 
-```
-$ petite --version
-
-10.4.0-pre-release.2
-```
-
 _Would you like to know more?_
 
 [BUILD instructions](https://github.com/cisco/ChezScheme/blob/main/BUILDING)
