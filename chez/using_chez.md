@@ -2,7 +2,9 @@
 
 # Using Chez
 
-__Start REPL__
+## REPL (aka. Waiter)
+
+__Start__
 
 ```
 $ scheme
@@ -13,7 +15,7 @@ Copyright 1984-2025 Cisco Systems, Inc.
 >
 ```
 
-__Exit REPL__
+__Exit__
 
 `(exit)` or `<CTRL-D>`.
 
