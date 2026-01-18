@@ -1,4 +1,4 @@
-[Top](../chez.md)  [Next](./using_chez.md)
+[Top](../chez.md)  [Next](./interactive_chez.md)
 
 # Install Chez
 
