@@ -2,7 +2,7 @@
 
 # Using Chez
 
-## REPL (aka. Waiter)
+## The REPL
 
 __Start__
 
