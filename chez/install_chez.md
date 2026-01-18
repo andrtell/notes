@@ -1,3 +1,5 @@
+[Top](../chez.md)
+
 # Install Chez
 
 __Clone__
