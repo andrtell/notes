@@ -10,12 +10,10 @@ The _parameter_ `command-line` becomes available when run as a script.
 
 ```scheme
 ; run.ss
-
 (display (command-line))
 ```
 ```
 $ scheme --script run.ss A Z
-
 (run.ss A Z)
 ```
 
@@ -24,50 +22,44 @@ Also works with the shell shebang `#!`.
 ```scheme
 #! /usr/bin/env -S scheme --script
 
-(display "Hello\n")
+(display "Works!")
 ```
 
 ```
-$ chmod +x ./hello.ss
-$ ./hello.ss
-
-Hello
+$ chmod +x ./run.ss
+$ ./run.ss
+Works!
 ```
 
 Chez ignores the first line of a _loaded_ script if it begins with `#!` followed by a `/` or `space`.
 
 ```
-> (load "hello.ss")
-Hello
+> (load "run.ss")
+Works!
 ```
 
 To run the script as a RNRS top-level program use `scheme --program`.
 
 ```
-; run.ss
-
 (import (rnrs))
 (display "Works!")
 ```
 
 ```
 $ scheme --program run.ss
-
 Works!
 ```
 
-`scheme-script` may be used in place of `scheme --program`.
+`scheme-script` may be used instead of `scheme --program`.
 
 ```
 #! /usr/bin/env scheme-script
-
 (import (rnrs))
 (display "Works!")
 ```
 
 ```
 $ ./run.ss
-
 Works!
 ```
 
@@ -91,7 +83,6 @@ __Shell commands__
 
 ```
 $ scheme --script run.ss
-
 total 0
 -rw-rw-r-- 1 tell tell 0 Jul 20 00:15 a.ss
 -rw-rw-r-- 1 tell tell 0 Jul 20 00:15 b.ss
