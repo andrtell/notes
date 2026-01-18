@@ -1,8 +1,6 @@
 [Top](../chez.md)  [Prev](./install_chez.md)
 
-# Using Chez
-
-## The REPL
+# Interactive Chez
 
 __Start__
 
@@ -23,7 +21,7 @@ __Stop__
 > (exit)
 ```
 
-__Load a file__
+__Load__
 
 ```
 ; hello.ss
