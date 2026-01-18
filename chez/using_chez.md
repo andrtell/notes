@@ -12,3 +12,11 @@ Copyright 1984-2025 Cisco Systems, Inc.
 
 >
 ```
+
+__Exit REPL__
+
+`(exit)` or `<CTRL-D>`.
+
+```
+> (exit)
+```
