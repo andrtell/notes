@@ -15,7 +15,7 @@ Copyright 1984-2025 Cisco Systems, Inc.
 >
 ```
 
-__Exit__
+__Stop__
 
 `(exit)` or `<CTRL-D>`.
 
