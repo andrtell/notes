@@ -2,7 +2,7 @@
 
 # Chez scripts
 
-__Basic script__
+__Basic scripts__
 
 We can run a program as a shell script using `scheme --script <FILE>`. 
 
@@ -41,6 +41,59 @@ Chez ignores the first line of a _loaded_ script if it begins with `#!` followed
 > (load "hello.ss")
 Hello
 ```
+
+__Environment variables__
+
+```scheme
+; env.ss
+
+(display (getenv "HOME"))
+(newline)
+```
+
+```
+$ scheme --script env.ss
+/home/user
+```
+
+__Shell commands__
+
+```scheme
+; shell_command.ss
+
+(system "ls -l")
+```
+
+```
+$ scheme --script shell_command.ss
+
+total 0
+-rw-rw-r-- 1 tell tell 0 Jul 20 00:15 a.ss
+-rw-rw-r-- 1 tell tell 0 Jul 20 00:15 b.ss
+0
+```
+
+__Capture shell command output__
+
+```scheme
+; capture.ss
+
+(let-values 
+  ([(in out err pid) 
+    (open-process-ports "ls -l"
+                        (buffer-mode block)
+                        (make-transcoder (utf-8-codec)))])
+   (display (get-string-all out)))
+```
+
+```
+$ scheme --script capture.ss
+
+total 0
+-rw-rw-r-- 1 tell tell 0 Jul 20 00:15 a.ss
+-rw-rw-r-- 1 tell tell 0 Jul 20 00:15 b.ss
+```
+
 
 Would you like to know more?
 
