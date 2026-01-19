@@ -65,9 +65,9 @@ Works!
 
 _Would you like to know more?_
 
-[Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug10.1.0/intro.html) | _Section 1.3. Parameters_
+[CSUG / Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug10.1.0/intro.html) | _Section 1.3. Parameters_
 
-[Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html) | _Section 2.5. Scheme Shell Scripts_
+[CSUG / Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html) | _Section 2.5. Scheme Shell Scripts_
 
 ## Recipes
 
@@ -84,7 +84,7 @@ $ scheme --script run.ss
 
 _Would you like to know more?_
 
-[Chapter 12. System Operations](https://cisco.github.io/ChezScheme/csug/system.html) | _Section 12.16. Environmental Queries and Settings_
+[CSUG / Chapter 12. System Operations](https://cisco.github.io/ChezScheme/csug/system.html) | _Section 12.16. Environmental Queries and Settings_
 
 __Shell commands__
 
@@ -102,7 +102,7 @@ total 0
 
 _Would you like to know more?_
 
-[Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html) | Section 4.1. Subprocess Communication
+[CSUG / Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html) | Section 4.1. Subprocess Communication
 
 __Capture shell command output__
 
@@ -125,9 +125,9 @@ total 0
 -rw-rw-r-- 1 tell tell 0 Jul 20 00:15 b.ss
 ```
 
-CSUG | [Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html) | Section 4.1. Subprocess Communication
+[CSUG / Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html) | Section 4.1. Subprocess Communication
 
-TSPL | [Chapter 7. Input and Output](https://www.scheme.com/tspl4/io.html)
+[TSPL / Chapter 7. Input and Output](https://www.scheme.com/tspl4/io.html)
 
 _TODO_
 
