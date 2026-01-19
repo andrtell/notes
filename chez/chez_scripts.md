@@ -65,9 +65,9 @@ Works!
 
 _Would you like to know more?_
 
-[Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug10.1.0/intro.html) | _Section 1.3_
+[Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug10.1.0/intro.html) | _Section 1.3. Parameters_
 
-[Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html) | _Section 2.5_
+[Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html) | _Section 2.5. Scheme Shell Scripts_
 
 ## Recipes
 
@@ -84,7 +84,7 @@ $ scheme --script run.ss
 
 _Would you like to know more?_
 
-[Chapter 12. System Operations](https://cisco.github.io/ChezScheme/csug/system.html) | _Section 12.6_
+[Chapter 12. System Operations](https://cisco.github.io/ChezScheme/csug/system.html) | _Section 12.16. Environmental Queries and Settings_
 
 __Shell commands__
 
