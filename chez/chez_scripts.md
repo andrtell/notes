@@ -133,6 +133,12 @@ total 0
 > Section 4.1. Subprocess Communication
 
 [TSPL / Chapter 7. Input and Output](https://www.scheme.com/tspl4/io.html)
+> Section 7.1. Transcoders
+>
+> Section 7.2. Opening Files
+
+
+
 
 _TODO_
 
