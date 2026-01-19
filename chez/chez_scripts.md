@@ -131,6 +131,6 @@ total 0
 
 _TODO_
 
-[Chez Scheme Version 10 User's Guide / Section 9.16. File System Interface](https://cisco.github.io/ChezScheme/csug/io.html#./io:h16)
+[CSUG / Section 9.16. File System Interface](https://cisco.github.io/ChezScheme/csug/io.html#./io:h16)
 
-[The Scheme Programming Language / Section 7.10. Filesystem Operations](https://www.scheme.com/tspl4/io.html#./io:h10)
+[TSPL / Section 7.10. Filesystem Operations](https://www.scheme.com/tspl4/io.html#./io:h10)
