@@ -1,3 +1,5 @@
+[Top](./README.md)
+
 # Chez
 
 [Install Chez](./chez/install_chez.md)
