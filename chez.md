@@ -4,3 +4,6 @@
 
 
 [Interactive Chez](./chez/interactive_chez.md)
+
+
+[Chez scripts](./chez/chez_scripts.md)
