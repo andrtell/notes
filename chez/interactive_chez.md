@@ -1,4 +1,4 @@
-[Top](../chez.md)  [Prev](./install_chez.md)
+[Top](../chez.md)  [Prev](./install_chez.md) [Next](./chez_scripts.md)
 
 # Interactive Chez
 
