@@ -97,4 +97,4 @@ debug> q
 
 _Would you like to know more?_
 
-[Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html) | _Section 2.1 and 2.4_
+[CSUG / Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html) | _Section 2.1 and 2.4_
