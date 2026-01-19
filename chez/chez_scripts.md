@@ -100,6 +100,10 @@ total 0
 0
 ```
 
+_Would you like to know more?_
+
+[Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html) | Section 4.1. Subprocess Communication
+
 __Capture shell command output__
 
 ```scheme
