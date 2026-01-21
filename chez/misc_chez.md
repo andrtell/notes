@@ -48,7 +48,7 @@ The default transcoder used `UTF-8` as seen above.
 
 __In other words__: 
 
-When calling `(load "file.ss")`, `(load-program "file.ss")`, etc .. the target file `file.ss` is assumed by default to be encoded using `UTF-8`.
+When calling `(load "file.ss")`, `(load-program "file.ss")`, etc .. the target file `file.ss` is assumed (the default) to be encoded using `UTF-8`.
 
 If you want to use a different encoding, you must set the `current-transcoder` parameter and then call `(load)`:
 
