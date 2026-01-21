@@ -88,3 +88,14 @@ You must
                         (make-transcoder (utf-8-codec)))]) ; transcoder created using the utf-8-codec.
    (display (get-string-all out)))
 ```
+
+_Would you like to know more?_
+
+
+_Would you like to know more?_
+
+[Chez / Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug/intro.htm)
+
+[Chez / Chapter 9. Input/Output Operations](https://cisco.github.io/ChezScheme/csug/io.html)
+
+[TSPL / Chapter 7. Input and Output](https://www.scheme.com/tspl4/io.html)
