@@ -9,3 +9,8 @@
 
 
 [Chez scripts](./chez/chez_scripts.md)
+
+
+__Misc__
+
+[Misc Chez](./chez/misc_chez.md)
