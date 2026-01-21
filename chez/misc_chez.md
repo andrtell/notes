@@ -1,3 +1,5 @@
+[Top](../chez.md)
+
 # Misc Chez
 
 ## __On Scheme strings and text input__
