@@ -71,7 +71,7 @@ HelloWorld ,徐恒晓
 
 __GENERAL CASE__
 
-When reading or writing from and to an external text source:
+When reading or writing text from and to an external source:
 
 You must
 
