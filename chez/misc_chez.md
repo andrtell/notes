@@ -68,3 +68,13 @@ HelloWorld ,徐恒晓
 ```
 
 [Source: 2nd comment from burgerrg on issue 466](https://github.com/cisco/ChezScheme/issues/466)
+
+__GENERAL CASE__
+
+When reading or writing from and to an external text source; you must
+
+1. Decide how that stream of text is encoded.
+2. Pick the correct transcoder.
+
+Example:
+
