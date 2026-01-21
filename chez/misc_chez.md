@@ -71,10 +71,20 @@ HelloWorld ,徐恒晓
 
 __GENERAL CASE__
 
-When reading or writing from and to an external text source; you must
+When reading or writing from and to an external text source:
+
+You must
 
 1. Decide how that stream of text is encoded.
-2. Pick the correct transcoder.
+2. Use a suitable transcoder.
 
-Example:
+```scheme
+; capture.ss
 
+(let-values 
+  ([(in out err pid) 
+    (open-process-ports "ls -l"
+                        (buffer-mode block)
+                        (make-transcoder (utf-8-codec)))]) ; transcoder created using the utf-8-codec.
+   (display (get-string-all out)))
+```
