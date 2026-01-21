@@ -65,10 +65,10 @@ Works!
 
 _Would you like to know more?_
 
-[CSUG / Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug10.1.0/intro.html)
+[Chez / Chapter 1. Introduction](https://cisco.github.io/ChezScheme/csug10.1.0/intro.html)
 > Section 1.3. Parameters
 
-[CSUG / Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html)
+[Chez / Chapter 2. Using Chez Scheme](https://cisco.github.io/ChezScheme/csug/use.html)
 > Section 2.5. Scheme Shell Scripts
 
 ## Recipes
@@ -86,7 +86,7 @@ $ scheme --script run.ss
 
 _Would you like to know more?_
 
-[CSUG / Chapter 12. System Operations](https://cisco.github.io/ChezScheme/csug/system.html)
+[Chez / Chapter 12. System Operations](https://cisco.github.io/ChezScheme/csug/system.html)
 > Section 12.16. Environmental Queries and Settings
 
 __Shell commands__
@@ -105,7 +105,7 @@ total 0
 
 _Would you like to know more?_
 
-[CSUG / Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html)
+[Chez / Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html)
 > Section 4.1. Subprocess Communication
 
 __Capture shell command output__
@@ -131,7 +131,7 @@ total 0
 
 _Would you like to know more?_
 
-[CSUG / Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html)
+[Chez / Chapter 4. Foreign Interface](https://cisco.github.io/ChezScheme/csug9.5/foreign.html)
 > Section 4.1. Subprocess Communication
 
 [TSPL / Chapter 7. Input and Output](https://www.scheme.com/tspl4/io.html)
@@ -144,6 +144,6 @@ _Would you like to know more?_
 
 _TODO_
 
-[CSUG / Section 9.16. File System Interface](https://cisco.github.io/ChezScheme/csug/io.html#./io:h16)
+[Chez / Section 9.16. File System Interface](https://cisco.github.io/ChezScheme/csug/io.html#./io:h16)
 
 [TSPL / Section 7.10. Filesystem Operations](https://www.scheme.com/tspl4/io.html#./io:h10)
