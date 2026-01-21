@@ -42,7 +42,7 @@ We can see what _transcoder_ is used by looking at the parameter `current-transc
 
 __LOAD__
 
-Loading files work the same but instead of of reading from `(standard-input-port)` a file port is used.
+Loading files works similar but instead of of reading from `(standard-input-port)` a file port is used.
 
 The default transcoder used `UTF-8` as seen above.
 
