@@ -28,8 +28,8 @@ So, what happens when type text into the REPL (the Waiter) ?
 "AB 徐恒"
 ```
 
-1. Your _modern_ terminal sends UTF-8 bytes to Chez Scheme's standard input.
-2. The built in __expression-editor__ decodes those bytes on the fly into Unicode code points.
+1. Your _modern_ terminal sends __UTF-8 bytes__ to Chez Scheme's standard input.
+2. The built in line-editor decodes those bytes on the fly into Unicode code points.
 3. The __reader__ sees the " … " and creates a in memory scheme string.
 4. A textual representation of the string is encoded into UTF-8 and those bytes are sent to your terminal.
 
@@ -90,9 +90,6 @@ You must
                         (make-transcoder (utf-8-codec)))]) ; transcoder created using the utf-8-codec.
    (display (get-string-all out)))
 ```
-
-_Would you like to know more?_
-
 
 _Would you like to know more?_
 
