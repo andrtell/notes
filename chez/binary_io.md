@@ -42,3 +42,16 @@ $ xxd data.bin
        [b5 (get-u8 port)])  ; eof
   (list b0 b1 b2 b3 b4 b5)) ; => (0 1 2 3 #!eof #!eof)
 ```
+
+```scheme
+(define read-bytes
+  (lambda (port)
+    (let ([byte (get-u8 port)])
+      (cond
+        [(eof-object? byte) '()]
+        [else (cons byte (read-bytes port))]))))
+
+(let ([port (open-file-input-port "data.bin")])
+  (read-bytes port)) ; => (0 1 2 3)
+```
+       
