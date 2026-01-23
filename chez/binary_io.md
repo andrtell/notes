@@ -8,7 +8,17 @@ $ xxd data.bin
 00000000: 0102 0304 0506 0708 090a 0b0c 0d0e 0f    ...............
 ```
 
+```scheme
+(file-exists? "data.bin") => ; #t
 ```
-> (file-exists? "data.bin")
-#t
+
+```scheme
+(open-file-input-port "data.bin") ; => #<binary input port data.bin>
+```
+
+```scheme
+(let ([port (open-file-input-port "data.bin")]
+      [b1 (get-u8 port)]
+      [b2 (get-u8 port)])
+  (list b1 b2)) ; => (1 2)
 ```
