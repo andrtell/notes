@@ -100,9 +100,20 @@ $ xxd data.bin
   (list v0 v1)) ; => (#vu8(0 1 2 3) #!eof)
 ```
 
+```
+$ head -c 16 /dev/urandom > random.bin
+
+$ xxd random.bin
+
+00000000: 7ddd ff2c 610c 0357 f061 3d41 d1fe 348c  }..,a..W.a=A..4.
+```
+
 ```scheme
-(let* ([port (open-file-input-port "data.bin")]
-       [v0 (get-bytevector-all port)]
+(let* ([port (open-file-input-port "random.bin")]
+       [v0 (get-bytevector-all port)]   ; reads all of the bytes available before eof.
        [v1 (get-bytevector-all port)])
-  (list v0 v1)) ; => 
+  (list v0 v1))
+
+; => (#vu8(125 221 255 44 97 12 3 87 240 97 61 65 209 254 52 140)
+;     #!eof)
 ```
