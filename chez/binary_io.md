@@ -66,4 +66,12 @@ $ xxd data.bin
        [port (open-bytevector-input-port bytes)])
   (read-bytes port)) ; => (0 1 2 3)
 ```
-       
+
+```scheme
+(let* ([port (open-file-input-port "data.bin")]
+       [L0 (lookahead-u8 port)] ; 0
+       [b0 (get-u8 port)]       ; 0
+       [L1 (lookahead-u8 port)] ; 1
+       [b1 (get-u8 port)])      ; 1
+    (list L0 b0 L1 b1)) ; => (0 0 1 1)
+```
