@@ -97,5 +97,12 @@ $ xxd data.bin
 (let* ([port (open-file-input-port "data.bin")]
        [v0 (get-bytevector-some port)]    ;  at least one byte and possibly more. Implementation dependent.
        [v1 (get-bytevector-some port)])
-  (list v0 v1)) ;=> (#vu8(0 1 2 3) #!eof)
+  (list v0 v1)) ; => (#vu8(0 1 2 3) #!eof)
+```
+
+```scheme
+(let* ([port (open-file-input-port "data.bin")]
+       [v0 (get-bytevector-all port)]
+       [v1 (get-bytevector-all port)])
+  (list v0 v1)) ; => 
 ```
