@@ -14,6 +14,10 @@ $ xxd data.bin
 
 ```scheme
 (open-file-input-port "data.bin") ; => #<binary input port data.bin>
+
+; defaults to
+
+(open-file-input-port "data.bin" (file-options) (buffer-mode block) #f) ; =>  #<binary input port data.bin>
 ```
 
 ```scheme
