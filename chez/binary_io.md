@@ -1,11 +1,11 @@
 # Binary IO
 
 ```
-$ printf '\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f' > data.bin
+$ printf '\x00\x01\x02\x03' > data.bin
 
 $ xxd data.bin
 
-00000000: 0102 0304 0506 0708 090a 0b0c 0d0e 0f    ...............
+00000000: 0001 0203                                ....
 ```
 
 ```scheme
@@ -17,8 +17,17 @@ $ xxd data.bin
 ```
 
 ```scheme
-(let ([port (open-file-input-port "data.bin")]
-      [b1 (get-u8 port)]
-      [b2 (get-u8 port)])
-  (list b1 b2)) ; => (1 2)
+(let* ([port (open-file-input-port "data.bin")]
+       [b0 (get-u8 port)])
+  (list b0)) ; => (0)
+```
+
+```scheme
+(let* ([port (open-file-input-port "data.bin")]
+       [b0 (get-u8 port)]
+       [b1 (get-u8 port)]
+       [b2 (get-u8 port)]
+       [b3 (get-u8 port)]
+       [b4 (get-u8 port)])
+  (list b0 b1 b2 b3 b4)) ; => (0 1 2 3 #!eof)
 ```
