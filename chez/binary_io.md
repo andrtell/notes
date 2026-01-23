@@ -17,6 +17,11 @@ $ xxd data.bin
 ```
 
 ```scheme
+(let ([port (open-file-input-port "data.bin")])
+  (file-port? port)) ; => #t
+```
+
+```scheme
 (let* ([port (open-file-input-port "data.bin")]
        [b0 (get-u8 port)])
   (list b0)) ; => (0)
