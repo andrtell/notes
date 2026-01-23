@@ -75,3 +75,11 @@ $ xxd data.bin
        [b1 (get-u8 port)])      ; 1
     (list L0 b0 L1 b1)) ; => (0 0 1 1)
 ```
+
+```scheme
+(let* ([port (open-file-input-port "data.bin")]
+       [bv0 (get-bytevector-n port 3)]   ; #uv8(0 1 2)
+       [bv1 (get-bytevector-n port 3)]   ; #uv8(3)
+       [bv2 (get-bytevector-n port 3)])  ; eof
+    (list bv0 bv1 bv2)) ; => (#vu8(0 1 2) #vu8(3) #!eof)
+```
