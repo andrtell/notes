@@ -58,5 +58,9 @@ $ xxd data.bin
 
 (let ([port (open-file-input-port "data.bin")])
   (read-bytes port)) ; => (0 1 2 3)
+
+(let* ([bytes #vu8(0 1 2 3)]
+       [port (open-bytevector-input-port bytes)])
+  (read-bytes port)) ; => (0 1 2 3)
 ```
        
