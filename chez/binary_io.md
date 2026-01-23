@@ -16,13 +16,14 @@ $ xxd data.bin
 (open-file-input-port "data.bin") ; => #<binary input port data.bin>
 
 ; defaults to
-
 (open-file-input-port "data.bin" (file-options) (buffer-mode block) #f) ; =>  #<binary input port data.bin>
 ```
 
 ```scheme
 (let ([port (open-file-input-port "data.bin")])
-  (file-port? port)) ; => #t
+  (list (port? port)
+        (file-port? port)
+        (binary-port? port))) ; => (#t #t #t)
 ```
 
 ```scheme
@@ -56,8 +57,10 @@ $ xxd data.bin
         [(eof-object? byte) '()]
         [else (cons byte (read-bytes port))]))))
 
+
 (let ([port (open-file-input-port "data.bin")])
   (read-bytes port)) ; => (0 1 2 3)
+
 
 (let* ([bytes #vu8(0 1 2 3)]
        [port (open-bytevector-input-port bytes)])
