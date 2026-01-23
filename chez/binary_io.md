@@ -27,7 +27,7 @@ $ xxd data.bin
 
 ```scheme
 (let ([port (open-file-input-port "data.bin")])
-  (port-file-descriptor port)) ; => 7 (or some other number)
+  (port-file-descriptor port)) ; => 7 (some integer)
 ```
 
 
