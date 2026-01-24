@@ -128,11 +128,17 @@ __Closing ports__
 ```scheme
 ; making sure close-port is called.
 
-(let ([p (open-input-file "input-file")])
+(let ([p (open-file-input-port "data.bin")])
   (dynamic-wind
     (lambda () #f)                   ; in
     (lambda () (process p))          ; body
     (lambda () (close-port p))))     ; out
+```
+
+```scheme
+(call-with-port (open-file-input-port "data.bin")
+                (lambda (port)
+                  (get-u8 port))) ;; => 0
 ```
 
 ```scheme
