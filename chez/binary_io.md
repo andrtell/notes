@@ -14,6 +14,8 @@ $ xxd data.bin
 
 __Open port__
 
+`open-file-input-port`
+
 ```scheme
 (open-file-input-port "data.bin") ; => #<binary input port data.bin>
 
@@ -23,10 +25,14 @@ __Open port__
 
 __Close port__
 
+`close-port`
+
 ```scheme
 (let ([port (open-file-input-port "data.bin")])
   (close-port port)) ; => <undefined>
 ```
+
+`dynamic-wind`
 
 ```scheme
 ; make sure input port is closed after processing, regardless of whether the processing completes normally. 
@@ -37,6 +43,8 @@ __Close port__
     (lambda () (process port))       ; body
     (lambda () (close-port port))))  ; out
 ```
+
+`call-with-port`
 
 ```scheme
 (call-with-port (open-file-input-port "data.bin")
@@ -59,6 +67,8 @@ __Close port__
 
 __Port info__
 
+`port?`, `file-port?` and `binary-port?`
+
 ```scheme
 (let ([port (open-file-input-port "data.bin")])
   (list (port? port)
@@ -66,12 +76,16 @@ __Port info__
         (binary-port? port))) ; => (#t #t #t)
 ```
 
+`port-file-descriptor`
+
 ```scheme
 (let ([port (open-file-input-port "data.bin")])
   (port-file-descriptor port)) ; => 7 (some integer)
 ```
 
 __Read data__
+
+`get-u8`
 
 ```scheme
 (let* ([port (open-file-input-port "data.bin")]
@@ -108,6 +122,8 @@ __Read data__
   (read-bytes port)) ; => (0 1 2 3)
 ```
 
+`lookahead-u8`
+
 ```scheme
 (let* ([port (open-file-input-port "data.bin")]
        [L0 (lookahead-u8 port)] ; 0
@@ -117,6 +133,8 @@ __Read data__
     (list L0 b0 L1 b1)) ; => (0 0 1 1)
 ```
 
+`get-bytevector-n`
+
 ```scheme
 (let* ([port (open-file-input-port "data.bin")]
        [v0 (get-bytevector-n port 3)]   ; #uv8(0 1 2)
@@ -124,6 +142,8 @@ __Read data__
        [v2 (get-bytevector-n port 3)])  ; eof
     (list v0 v1 v2)) ; => (#vu8(0 1 2) #vu8(3) #!eof)
 ```
+
+`get-bytevector-n!`
 
 ```scheme
 (let* ([port (open-file-input-port "data.bin")]
@@ -134,12 +154,16 @@ __Read data__
   (list r0 r1 r2 bv)) ; => (3 1 #!eof #vu8(3 1 2 255 255))
 ```
 
+`get-bytevector-some`
+
 ```scheme
 (let* ([port (open-file-input-port "data.bin")]
        [v0 (get-bytevector-some port)]    ;  at least one byte and possibly more. Implementation dependent.
        [v1 (get-bytevector-some port)])
   (list v0 v1)) ; => (#vu8(0 1 2 3) #!eof)
 ```
+
+`get-bytevector-all`
 
 ```
 $ head -c 16 /dev/urandom > random.bin
