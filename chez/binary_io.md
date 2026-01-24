@@ -121,7 +121,8 @@ $ xxd random.bin
 __Closing ports__
 
 ```scheme
-(close-port port)
+(let ([port (open-file-input-port "data.bin")])
+  (close-port port))
 ```
 
 ```scheme
