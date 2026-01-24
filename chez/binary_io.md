@@ -126,7 +126,7 @@ __Closing ports__
 ```
 
 ```scheme
-; making sure close-port is called.
+; make sure input port is closed after processing, regardless of whether the processing completes normally. 
 
 (let ([port (open-file-input-port "data.bin")])
   (dynamic-wind
