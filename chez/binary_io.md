@@ -130,9 +130,9 @@ __Closing ports__
 
 (let ([p (open-input-file "input-file")])
   (dynamic-wind
-    (lambda () #f)
-    (lambda () (process p))
-    (lambda () (close-port p))))
+    (lambda () #f)                   ; in
+    (lambda () (process p))          ; body
+    (lambda () (close-port p))))     ; out
 ```
 
 ```scheme
