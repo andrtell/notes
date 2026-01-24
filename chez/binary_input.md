@@ -6,8 +6,12 @@ __Sample data__
 $ printf '\x00\x01\x02\x03' > data.bin
 
 $ xxd data.bin
-
 00000000: 0001 0203                                ....
+
+$ head -c 16 /dev/urandom > random.bin
+
+$ xxd random.bin
+00000000: 7ddd ff2c 610c 0357 f061 3d41 d1fe 348c  }..,a..W.a=A..4.
 ```
 
 __File system__
@@ -171,13 +175,7 @@ __Read data__
 
 `get-bytevector-all`
 
-```
-$ head -c 16 /dev/urandom > random.bin
 
-$ xxd random.bin
-
-00000000: 7ddd ff2c 610c 0357 f061 3d41 d1fe 348c  }..,a..W.a=A..4.
-```
 
 ```scheme
 (let* ([port (open-file-input-port "random.bin")]
