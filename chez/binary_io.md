@@ -125,6 +125,16 @@ __Closing ports__
 ```
 
 ```scheme
+; making sure close-port is called.
+
+(let ([p (open-input-file "input-file")])
+  (dynamic-wind
+    (lambda () #f)
+    (lambda () (process p))
+    (lambda () (close-port p))))
+```
+
+```scheme
 ; an implementation of call-with-port
 
 (define call-with-port
@@ -134,4 +144,3 @@ __Closing ports__
         [(val) (close-port port) val]
         [val* (close-port port) (apply values val*)]))))
 ```
-
