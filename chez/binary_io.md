@@ -12,12 +12,52 @@ $ xxd data.bin
 (file-exists? "data.bin") => ; #t
 ```
 
+__Open port__
+
 ```scheme
 (open-file-input-port "data.bin") ; => #<binary input port data.bin>
 
 ; defaults to
 (open-file-input-port "data.bin" (file-options) (buffer-mode block) #f) ; =>  #<binary input port data.bin>
 ```
+
+__Close port__
+
+```scheme
+(let ([port (open-file-input-port "data.bin")])
+  (close-port port)) ; => <undefined>
+```
+
+```scheme
+; make sure input port is closed after processing, regardless of whether the processing completes normally. 
+
+(let ([port (open-file-input-port "data.bin")])
+  (dynamic-wind
+    (lambda () #f)                   ; in
+    (lambda () (process port))       ; body
+    (lambda () (close-port port))))  ; out
+```
+
+```scheme
+(call-with-port (open-file-input-port "data.bin")
+                (lambda (port)
+                  (get-u8 port))) ;; => 0
+```
+
+```scheme
+; an implementation of call-with-port
+
+(define call-with-port
+  (lambda (port proc)
+    (call-with-values (lambda () (proc port))
+      (case-lambda
+        [(val) (close-port port)
+               val]
+        [val* (close-port port)
+              (apply values val*)]))))
+```
+
+__Port info__
 
 ```scheme
 (let ([port (open-file-input-port "data.bin")])
@@ -31,6 +71,7 @@ $ xxd data.bin
   (port-file-descriptor port)) ; => 7 (some integer)
 ```
 
+__Read data__
 
 ```scheme
 (let* ([port (open-file-input-port "data.bin")]
@@ -116,40 +157,4 @@ $ xxd random.bin
 
 ; => (#vu8(125 221 255 44 97 12 3 87 240 97 61 65 209 254 52 140)
 ;     #!eof)
-```
-
-__Closing ports__
-
-```scheme
-(let ([port (open-file-input-port "data.bin")])
-  (close-port port)) ; => <undefined>
-```
-
-```scheme
-; make sure input port is closed after processing, regardless of whether the processing completes normally. 
-
-(let ([port (open-file-input-port "data.bin")])
-  (dynamic-wind
-    (lambda () #f)                   ; in
-    (lambda () (process port))       ; body
-    (lambda () (close-port port))))  ; out
-```
-
-```scheme
-(call-with-port (open-file-input-port "data.bin")
-                (lambda (port)
-                  (get-u8 port))) ;; => 0
-```
-
-```scheme
-; an implementation of call-with-port
-
-(define call-with-port
-  (lambda (port proc)
-    (call-with-values (lambda () (proc port))
-      (case-lambda
-        [(val) (close-port port)
-               val]
-        [val* (close-port port)
-              (apply values val*)]))))
 ```
