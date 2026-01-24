@@ -221,17 +221,12 @@ Reading an multi-byte integer from a port.
   (lambda (port)
     (bytevector-u16-native-ref (get-bytevector-n port 2) 0)))
 
-; Examples
+; Example
 
-(let* ([bytes #vu8(1 0)]
+(let* ([bytes #vu8(1 0 1 0 1 0)]
        [port (open-bytevector-input-port bytes)])
-  (get-u16-le port)) ; => 1
-
-(let* ([bytes #vu8(1 0)]
-       [port (open-bytevector-input-port bytes)])
-  (get-u16-be port)) ; => 256
-
-(let* ([bytes #vu8(1 0)]
-       [port (open-bytevector-input-port bytes)])
-  (get-u16 port)) ; => 1 (x86)
+  (list 
+    (get-u16-le port)
+    (get-u16-be port)
+    (get-u16 port))) ; => (1 256 1)
 ```
