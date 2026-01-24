@@ -196,7 +196,7 @@ Reading an multi-byte integer from a port.
   (lambda (port)
     (let ((low  (get-u8 port))      ; may consume eof or 1 byte + eof from stream
           (high (get-u8 port)))     ; up to caller to make sure there are atleast 2 bytes available.
-                                    ; probably two concerns here 1. read bytes 2. interpret value
+                                    ; probably two concerns here 1. read bytes + check size 2. interpret value
       (+ low (* high 256)))))       ; alt: (fx+ low (fxsll high 8))
 
 (define get-u16-be
