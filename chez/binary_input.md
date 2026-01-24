@@ -186,3 +186,24 @@ __Read data__
 ; => (#vu8(125 221 255 44 97 12 3 87 240 97 61 65 209 254 52 140)
 ;     #!eof)
 ```
+
+## Recipies
+
+`get-le-u16`
+
+Read little-endian unsigned 16 bit integer from port
+
+```scheme
+; get-u8
+
+(define get-le-u16
+  (lambda (port)
+    'todo))
+
+; bytevector
+
+(define get-le-u16
+  (lambda (port)
+    'todo))
+
+```
