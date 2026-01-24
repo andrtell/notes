@@ -1,5 +1,7 @@
 # Binary Input
 
+__Some data__
+
 ```
 $ printf '\x00\x01\x02\x03' > data.bin
 
@@ -7,6 +9,8 @@ $ xxd data.bin
 
 00000000: 0001 0203                                ....
 ```
+
+`file-exists?`
 
 ```scheme
 (file-exists? "data.bin") => ; #t
