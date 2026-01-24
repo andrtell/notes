@@ -122,17 +122,17 @@ __Closing ports__
 
 ```scheme
 (let ([port (open-file-input-port "data.bin")])
-  (close-port port))
+  (close-port port)) ; => <undefined>
 ```
 
 ```scheme
 ; making sure close-port is called.
 
-(let ([p (open-file-input-port "data.bin")])
+(let ([port (open-file-input-port "data.bin")])
   (dynamic-wind
     (lambda () #f)                   ; in
-    (lambda () (process p))          ; body
-    (lambda () (close-port p))))     ; out
+    (lambda () (process port))       ; body
+    (lambda () (close-port port))))  ; out
 ```
 
 ```scheme
