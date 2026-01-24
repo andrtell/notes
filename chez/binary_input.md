@@ -189,56 +189,28 @@ __Read data__
 
 ## Recipies
 
-`get-le-u16`, `get-be-u16`
-
-Read a 16 bit integer from a port.
+Read an unsigned 16 bit integer from a port.
 
 ```scheme
-; little-endian.
-
-(define get-le-u16
+(define get-u16-le
   (lambda (port)
-    (let ((low  (get-u8 port))                     ; may consume 1 byte + eof from stream
-          (high (get-u8 port)))                    ; up to caller to make sure there are atleast 2 bytes available.
-    (if (or (eof-object? low) (eof-object? high))
-        (eof-object)
-        (+ low (* high 256))))))                   ; or maybe: (fx+ low (fxsll high 8))
-```
+    (let ((low  (get-u8 port))      ; may consume eof or 1 byte + eof from stream
+          (high (get-u8 port)))     ; up to caller to make sure there are atleast 2 bytes available.
+      (+ low (* high 256)))))       ; alt: (fx+ low (fxsll high 8))
 
-
-@TODO
-
-```scheme
-; WIP
-
-
-; using get-u8
-
-(define get-le-u16
+(define get-u16-be
   (lambda (port)
     (let ((low  (get-u8 port))
           (high (get-u8 port)))
-    (if (or (eof-object? low) (eof-object? high))
-        (eof-object)
-        (+ low (* high 256))))))  ; little-endian: low byte first
+      (+ high (* low 256))))) 
 
-; bytevector
+; Using bytevector-u16-ref.
 
-(define get-le-u16
-  (let ((endianness (endianness little)))
-    (lambda (port)
-      (let ((bv (get-bytevector-n port 2)))
-        (if (eof-object? bv)
-            bv
-            (bytevector-u16-native-ref bv 0))))))
-
-(define get-le-u16
+(define get-u16-le
   (lambda (port)
-    (let ((bv (make-bytevector 2)))
-      (if (= (get-bytevector-n! port bv 0 2) 2)
-          (bytevector-u16-ref bv 0 'little)
-          (eof-object)))))
+    (bytevector-u16-ref (get-bytevector-n port 2) 0 'little)))
 
-(define (get-le-u16 port)
-  (bytevector-u16-ref (get-bytevector-n port 2) 0 (endianness little)))
+(define get-u16-be
+  (lambda (port)
+    (bytevector-u16-ref (get-bytevector-n port 2) 0 'big)))
 ```
