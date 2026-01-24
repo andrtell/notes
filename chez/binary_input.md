@@ -194,16 +194,36 @@ __Read data__
 Read little-endian unsigned 16 bit integer from port
 
 ```scheme
-; get-u8
+; WIP
+
+
+; using get-u8
 
 (define get-le-u16
   (lambda (port)
-    'todo))
+    (let ((low  (get-u8 port))
+          (high (get-u8 port)))
+    (if (or (eof-object? low) (eof-object? high))
+        (eof-object)
+        (+ low (* high 256))))))  ; little-endian: low byte first
 
 ; bytevector
 
 (define get-le-u16
-  (lambda (port)
-    'todo))
+  (let ((endianness (endianness little)))
+    (lambda (port)
+      (let ((bv (get-bytevector-n port 2)))
+        (if (eof-object? bv)
+            bv
+            (bytevector-u16-native-ref bv 0))))))
 
+(define get-le-u16
+  (lambda (port)
+    (let ((bv (make-bytevector 2)))
+      (if (= (get-bytevector-n! port bv 0 2) 2)
+          (bytevector-u16-ref bv 0 'little)
+          (eof-object)))))
+
+(define (get-le-u16 port)
+  (bytevector-u16-ref (get-bytevector-n port 2) 0 (endianness little)))
 ```
