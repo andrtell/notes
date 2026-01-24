@@ -1,6 +1,6 @@
 # Binary Input
 
-__Some data__
+__Sample data__
 
 ```
 $ printf '\x00\x01\x02\x03' > data.bin
@@ -9,6 +9,8 @@ $ xxd data.bin
 
 00000000: 0001 0203                                ....
 ```
+
+__File system__
 
 `file-exists?`
 
