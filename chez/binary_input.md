@@ -189,9 +189,24 @@ __Read data__
 
 ## Recipies
 
-`get-le-u16`
+`get-le-u16`, `get-be-u16`
 
-Read little-endian unsigned 16 bit integer from port
+Read a 16 bit integer from a port.
+
+```scheme
+; little-endian.
+
+(define get-le-u16
+  (lambda (port)
+    (let ((low  (get-u8 port))                     ; may consume 1 byte + eof from stream
+          (high (get-u8 port)))
+    (if (or (eof-object? low) (eof-object? high))
+        (eof-object)
+        (+ low (* high 256))))))
+```
+
+
+@TODO
 
 ```scheme
 ; WIP
