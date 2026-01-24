@@ -202,7 +202,7 @@ Read a 16 bit integer from a port.
           (high (get-u8 port)))                    ; up to caller to make sure there are atleast 2 bytes available.
     (if (or (eof-object? low) (eof-object? high))
         (eof-object)
-        (+ low (* high 256))))))
+        (+ low (* high 256))))))                   ; or maybe: (fx+ low (fxsll high 8))
 ```
 
 
