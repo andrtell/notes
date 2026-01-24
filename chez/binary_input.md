@@ -189,7 +189,7 @@ __Read data__
 
 ## Recipies
 
-Read an unsigned 16 bit integer from a port.
+Reading an multi-byte integer from a port.
 
 ```scheme
 (define get-u16-le
@@ -213,4 +213,10 @@ Read an unsigned 16 bit integer from a port.
 (define get-u16-be
   (lambda (port)
     (bytevector-u16-ref (get-bytevector-n port 2) 0 'big)))
+
+; Using bytevector-u16-native-ref
+
+(define get-u16
+  (lambda (port)
+    (bytevector-u16-native-ref (get-bytevector-n port 2) 0)))
 ```
