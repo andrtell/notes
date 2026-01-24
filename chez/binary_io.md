@@ -141,7 +141,8 @@ __Closing ports__
   (lambda (port proc)
     (call-with-values (lambda () (proc port))
       (case-lambda
-        [(val) (close-port port) val]
+        [(val) (close-port port)
+               val]
         [val* (close-port port)
               (apply values val*)]))))
 ```
