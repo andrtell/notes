@@ -199,7 +199,7 @@ Read a 16 bit integer from a port.
 (define get-le-u16
   (lambda (port)
     (let ((low  (get-u8 port))                     ; may consume 1 byte + eof from stream
-          (high (get-u8 port)))
+          (high (get-u8 port)))                    ; up to caller to make sure there are atleast 2 bytes available.
     (if (or (eof-object? low) (eof-object? high))
         (eof-object)
         (+ low (* high 256))))))
