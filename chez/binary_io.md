@@ -120,6 +120,18 @@ $ xxd random.bin
 
 __Closing ports__
 
-@TODO
+```scheme
+(close-port port)
+```
 
+```scheme
+; an implementation of call-with-port
+
+(define call-with-port
+  (lambda (port proc)
+    (call-with-values (lambda () (proc port))
+      (case-lambda
+        [(val) (close-port port) val]
+        [val* (close-port port) (apply values val*)]))))
+```
 
