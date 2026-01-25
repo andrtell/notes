@@ -234,3 +234,10 @@ __Read and parse a word__
        [port (open-bytevector-input-port bytes)])
   (get-u32 port)) ; => 256
 ```
+
+__Getting bits__
+
+```scheme
+
+
+```
