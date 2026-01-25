@@ -230,14 +230,13 @@ Reading an multi-byte integer from a port.
       (lambda (port)
 	      (let ([bytes-read 
 	             (get-bytevector-n! port buffer 0 word-size)])
-	        (if (or (eof-object? bytes-read)
-                    (< bytes-read word-size))
+	        (if (eof-object? bytes-read)
 	          (error 'get-word "Unexpected EOF")
               (parser buffer)))))))
 
 ; Example
 
-(define get-u32 (make-word-reader 4 (lambda (buffer) (bytevector-u32-ref buffer 0 'little))))
+(define get-u32 (make-get-word 4 (lambda (buffer) (bytevector-u32-ref buffer 0 'little))))
 
 (let* ([bytes #vu8(0 1 0 0)]
        [port (open-bytevector-input-port bytes)])
