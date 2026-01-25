@@ -189,29 +189,22 @@ __Read data__
 
 ## Recipies
 
-Reading an multi-byte integer from a port.
+__Read and parse a word__
 
 ```scheme
 ; get-u8
 
 (define get-u16-le
   (lambda (port)
-    (let ((low  (get-u8 port))      ; may consume eof or 1 byte + eof from stream
-          (high (get-u8 port)))     ; up to caller to make sure there are atleast 2 bytes available.
-                                    ; probably two concerns here 1. read bytes + check size 2. parse value
-      (+ low (* high 256)))))       ; alt: (fx+ low (fxsll high 8))
+    (let ((low  (get-u8 port))
+          (high (get-u8 port)))
+      (+ low (* high 256)))))
+
+; bytevector-u16-ref (and friends)
 
 (define get-u16-be
   (lambda (port)
-    (let ((low  (get-u8 port))
-          (high (get-u8 port)))
-      (+ high (* low 256))))) 
-
-; bytevector-u16-ref.
-
-(define get-u16-le
-  (lambda (port)
-    (bytevector-u16-ref (get-bytevector-n port 2) 0 'little))) ; or 'big
+    (bytevector-u16-ref (get-bytevector-n port 2) 0 (endianness big))))
 
 ; Example
 
@@ -221,8 +214,7 @@ Reading an multi-byte integer from a port.
     (get-u16-le port)
     (get-u16-be port))) ; => (1 256)
 
-
-; Factory
+; Make a factory
 
 (define make-get-word
   (lambda (word-size parser)
