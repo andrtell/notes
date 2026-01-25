@@ -226,13 +226,12 @@ Reading an multi-byte integer from a port.
 
 (define make-get-word
   (lambda (word-size parser)
-    (let ([buffer (make-bytevector word-size 0)])
-      (lambda (port)
-	      (let ([bytes-read 
-	             (get-bytevector-n! port buffer 0 word-size)])
-	        (if (eof-object? bytes-read)
-	          (error 'get-word "Unexpected EOF")
-              (parser buffer)))))))
+    (lambda (port)
+      (let* ([buffer (make-bytevector word-size 0)]
+             [bytes-read (get-bytevector-n! port buffer 0 word-size)])
+        (if (eof-object? bytes-read)
+            (error 'get-word "Unexpected EOF")
+            (parser buffer))))))
 
 ; Example
 
