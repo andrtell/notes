@@ -14,6 +14,8 @@ $ xxd random.bin
 00000000: 7ddd ff2c 610c 0357 f061 3d41 d1fe 348c  }..,a..W.a=A..4.
 ```
 
+## Basic operations
+
 __File system__
 
 `file-exists?`
