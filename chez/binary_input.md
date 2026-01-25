@@ -192,6 +192,8 @@ __Read data__
 Reading an multi-byte integer from a port.
 
 ```scheme
+; get-u8
+
 (define get-u16-le
   (lambda (port)
     (let ((low  (get-u8 port))      ; may consume eof or 1 byte + eof from stream
@@ -205,21 +207,11 @@ Reading an multi-byte integer from a port.
           (high (get-u8 port)))
       (+ high (* low 256))))) 
 
-; Using bytevector-u16-ref.
+; bytevector-u16-ref.
 
 (define get-u16-le
   (lambda (port)
-    (bytevector-u16-ref (get-bytevector-n port 2) 0 'little)))
-
-(define get-u16-be
-  (lambda (port)
-    (bytevector-u16-ref (get-bytevector-n port 2) 0 'big)))
-
-; Using bytevector-u16-native-ref
-
-(define get-u16
-  (lambda (port)
-    (bytevector-u16-native-ref (get-bytevector-n port 2) 0)))
+    (bytevector-u16-ref (get-bytevector-n port 2) 0 'little))) ; or 'big
 
 ; Example
 
@@ -227,6 +219,27 @@ Reading an multi-byte integer from a port.
        [port (open-bytevector-input-port bytes)])
   (list 
     (get-u16-le port)
-    (get-u16-be port)
-    (get-u16 port))) ; => (1 256 1)
+    (get-u16-be port))) ; => (1 256)
+
+
+; Factory
+
+(define make-get-word
+  (lambda (word-size parser)
+    (let ([buffer (make-bytevector word-size 0)])
+      (lambda (port)
+	      (let ([bytes-read 
+	             (get-bytevector-n! port buffer 0 word-size)])
+	        (if (or (eof-object? bytes-read)
+		              (< bytes-read word-size))
+	          (error 'get-word "Unexpected EOF")
+            (parser buffer)))))))
+
+; Example
+
+(define get-u32 (make-word-reader 4 (lambda (buffer) (bytevector-u32-ref buffer 0 'little))))
+
+(let* ([bytes #vu8(0 1 0 0)]
+       [port (open-bytevector-input-port bytes)])
+  (get-u32 port)) ; => 256
 ```
