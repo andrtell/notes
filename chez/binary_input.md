@@ -215,7 +215,7 @@ Reading an multi-byte integer from a port.
 
 ; Example
 
-(let* ([bytes #vu8(1 0 1 0 1 0)]
+(let* ([bytes #vu8(1 0 1 0)]
        [port (open-bytevector-input-port bytes)])
   (list 
     (get-u16-le port)
