@@ -235,7 +235,7 @@ __Read and parse a word__
   (get-u32 port)) ; => 256
 ```
 
-__Getting bits__
+__Getting the bits__
 
 ```scheme
 
