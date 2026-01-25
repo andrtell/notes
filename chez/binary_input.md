@@ -231,9 +231,9 @@ Reading an multi-byte integer from a port.
 	      (let ([bytes-read 
 	             (get-bytevector-n! port buffer 0 word-size)])
 	        (if (or (eof-object? bytes-read)
-		              (< bytes-read word-size))
+                    (< bytes-read word-size))
 	          (error 'get-word "Unexpected EOF")
-            (parser buffer)))))))
+              (parser buffer)))))))
 
 ; Example
 
