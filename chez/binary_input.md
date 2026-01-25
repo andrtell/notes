@@ -214,7 +214,7 @@ __Read and parse a word__
     (get-u16-le port)
     (get-u16-be port))) ; => (1 256)
 
-; Make a factory
+; Use a factory
 
 (define make-get-word
   (lambda (word-size parser)
