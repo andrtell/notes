@@ -220,6 +220,11 @@ __Read and parse a word__
 __Bits and bytes__
 
 ```scheme
+; C: (1U << k) - 1
 
-
+(let ([n 3])
+  (list
+    (- (expt 2 n)  1)
+    (- (ash 1 n)   1)
+    (- (fxsll 1 n) 1))) ; => (7 7 7) ; 7 = 111
 ```
