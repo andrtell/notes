@@ -215,24 +215,6 @@ __Read and parse a word__
   (list 
     (get-u16-le port)
     (get-u16-be port))) ; => (1 256)
-
-; Use a factory
-
-(define make-get-word
-  (lambda (word-size parser)
-    (lambda (port)
-      (let ([buffer (get-bytevector-n port word-size)])
-        (if (eof-object? buffer)
-            (error 'get-word "Unexpected EOF")
-            (parser buffer))))))
-
-; Example
-
-(define get-u32 (make-get-word 4 (lambda (buffer) (bytevector-u32-ref buffer 0 'little))))
-
-(let* ([bytes #vu8(0 1 0 0)]
-       [port (open-bytevector-input-port bytes)])
-  (get-u32 port)) ; => 256
 ```
 
 __Bits and bytes__
