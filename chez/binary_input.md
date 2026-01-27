@@ -220,6 +220,8 @@ __Read and parse a word__
 __Bits and bytes__
 
 ```scheme
+WIP
+
 ; Mask with N bits:             (1U << N) - 1
 (- (fxsll 1 N) 1)
 
