@@ -226,8 +226,14 @@ __Bits and bytes__
 ; Set bit N:                    val | (1 << N)
 (fxior val (fxsll 1 N))
 
+;OR just
+(fxcopy-bit val N 1)
+
 ; Clear bit N:                  val & ~(1 << N)
 (fxand val (fxnot (fxsll 1 N)))
+
+;OR just
+(fxcopy-bit val N 0)
 
 ; Toggle bit N:                 val ^ (1 << N)
 (fxxor val (fxsll 1 N))
@@ -235,8 +241,20 @@ __Bits and bytes__
 ; Test if bit N is set (#t/#f): val & (1 << N)
 (not (fxzero? (fxand val (fxsll 1 n))))
 
+; OR just
+(fxbit-set? val N)
+
 ; Extract bit n as 0 or 1:      (val >> n) & 1
 (fxand 1 (fxsra val n))
+
+; Extract bit field
+
+(fxbit-field #b10110 0 3) #b00110
+                ^  ^
+(fxbit-field #b10110 1 3) #b00011
+                ^ ^
+(fxbit-field #b10110 2 3) #b00001
+(fxbit-field #b10110 3 3) #b00000
 
 ; Lowest 4 bits:                val & 0xF
 (fxand val #b1111)
