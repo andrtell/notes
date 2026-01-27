@@ -220,7 +220,6 @@ __Read and parse a word__
 __Bits and bytes__
 
 ```scheme
-
 ; Mask with N bits:             (1U << N) - 1
 (- (fxsll 1 N) 1)
 
@@ -237,32 +236,21 @@ __Bits and bytes__
 (not (fxzero? (fxand val (fxsll 1 n))))
 
 ; Extract bit n as 0 or 1:      (val >> n) & 1
-(fxand 1 (fxsra x n))
+(fxand 1 (fxsra val n))
 
-; Lowest 4 bits
-; C: x & 0xF
-(define (lower-4 x)
-  (fxand x #xf))
+; Lowest 4 bits:                val & 0xF
+(fxand val #b1111)
 
-; Lowest n bits
-; C: x & ((1 << n) - 1)
-(define (lowest-bits x n)
-  (fxand x (fx- (fxsll 1 n) 1)))
+; Lowest n bits:                val & ((1 << n) - 1)
+(fxand val (fx- (fxsll 1 n) 1))
 
-; Power of two? (non-zero)
-; C: x && ((x & (x-1)) == 0)
-(define (power-of-two? x)
-  (and (not (fxzero? x))
-       (fxzero? (fxand x (fx- x 1)))))
+; Power of two? (non-zero):     val && ((val & (val - 1)) == 0)
+(and (not (fxzero? val))
+     (fxzero? (fxand val (fx- val 1))))
 
-; Isolate lowest set bit
-; C: x & -x
-(define (lowest-set-bit x)
-  (fxand x (fx- x)))
+; Isolate lowest set bit:       val & -val
+(fxand val (fx- val))
 
-; Clear lowest set bit
-; C: x & (x - 1)
-(define (clear-lowest-set-bit x)
-  (fxand x (fx- x 1)))
-
+; Clear lowest set bit:         val & (val - 1)
+(fxand val (fx- val 1))
 ```
