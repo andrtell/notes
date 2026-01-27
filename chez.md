@@ -4,12 +4,11 @@
 
 [Install Chez](./chez/install_chez.md)
 
-
 [Interactive Chez](./chez/interactive_chez.md)
-
 
 [Chez scripts](./chez/chez_scripts.md)
 
+[Binary Input](./chez/binary_input.md)
 
 __Misc__
 
