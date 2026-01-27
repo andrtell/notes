@@ -221,29 +221,23 @@ __Bits and bytes__
 
 ```scheme
 
-; Mask with N bits: (1U << N) - 1
+; Mask with N bits:             (1U << N) - 1
 (- (fxsll 1 N) 1)
 
-; Set bit N: val | (1 << N)
+; Set bit N:                    val | (1 << N)
 (fxior val (fxsll 1 N))
 
-; Clear bit n
-; C: x & ~(1 << n)
-(fxand x (fxnot (fxsll 1 n)))
+; Clear bit N:                  val & ~(1 << N)
+(fxand val (fxnot (fxsll 1 N)))
 
-; Toggle bit n
-; C: x ^ (1 << n)
-(fxxor x (fxsll 1 n))
+; Toggle bit N:                 val ^ (1 << N)
+(fxxor val (fxsll 1 N))
 
-; Test if bit n is set → #t/#f
-; C: x & (1 << n)
-(define (bit-set? x n)
-  (not (fxzero? (fxand x (fxsll 1 n)))))
+; Test if bit N is set (#t/#f): val & (1 << N)
+(not (fxzero? (fxand val (fxsll 1 n))))
 
-; Extract bit n as 0 or 1
-; C: (x >> n) & 1
-(define (get-bit x n)
-  (fxand 1 (fxsra x n)))
+; Extract bit n as 0 or 1:      (val >> n) & 1
+(fxand 1 (fxsra x n))
 
 ; Lowest 4 bits
 ; C: x & 0xF
