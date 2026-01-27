@@ -222,7 +222,7 @@ __Bits and bytes__
 ```scheme
 ; Mask with N bits
 ; ----------------             
-(- (fxsll 1 N) 1)                ; (1U << N) - 1
+(fx- (fxsll 1 N) 1)              ; (1U << N) - 1
 
 ; Update bit N
 ; ------------
@@ -240,7 +240,7 @@ __Bits and bytes__
 ; ---------------------
 (fxbit-set? val N)
 
-(not (fxzero? (fxand val (fxsll 1 n))))  ; val & (1 << N)  Test bit N
+(fxnot (fxzero? (fxand val (fxsll 1 n))))  ; val & (1 << N)  Test bit N
 
 ; Test bit N (1 or 0)
 ; -------------------
