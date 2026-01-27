@@ -220,55 +220,44 @@ __Read and parse a word__
 __Bits and bytes__
 
 ```scheme
-WIP
-
-; Mask with N bits:             
+; Mask with N bits
+; ----------------             
 (- (fxsll 1 N) 1)                ; (1U << N) - 1
 
-; Update bit N:
+; Update bit N
+; ------------
 (fxcopy-bit val N 1)             ; Set bit N
 (fxcopy-bit val N 0)             ; Clear bit N
 
 (fxior val (fxsll 1 N))          ; val | (1 << N)     Set   bit N
 (fxand val (fxnot (fxsll 1 N)))  ; val & ~(1 << N)    Clear bit N
 
-;OR just
-(fxcopy-bit val N 0)
+; Toggle bit N
+; ------------                 
+(fxxor val (fxsll 1 N))          ; val ^ (1 << N) 
 
-; Toggle bit N:                 val ^ (1 << N)
-(fxxor val (fxsll 1 N))
-
-; Test if bit N is set (#t/#f): val & (1 << N)
-(not (fxzero? (fxand val (fxsll 1 n))))
-
-; OR just
+; Test bit N (#t or #f)
+; ---------------------
 (fxbit-set? val N)
 
-; Extract bit n as 0 or 1:      (val >> n) & 1
-(fxand 1 (fxsra val n))
+(not (fxzero? (fxand val (fxsll 1 n))))  ; val & (1 << N)  Test bit N
 
-; Extract bit field
+; Test bit N (1 or 0)
+; -------------------
+(fxand 1 (fxsra val n))          ; (val >> n) & 1 
 
+; Get bit field
+; -------------
 (fxbit-field #b10110 0 3) #b00110
                 ^  ^
 (fxbit-field #b10110 1 3) #b00011
                 ^ ^
 (fxbit-field #b10110 2 3) #b00001
+                ^^
 (fxbit-field #b10110 3 3) #b00000
+                ^
+                ^
 
-; Lowest 4 bits:                val & 0xF
-(fxand val #b1111)
-
-; Lowest n bits:                val & ((1 << n) - 1)
-(fxand val (fx- (fxsll 1 n) 1))
-
-; Power of two? (non-zero):     val && ((val & (val - 1)) == 0)
-(and (not (fxzero? val))
-     (fxzero? (fxand val (fx- val 1))))
-
-; Isolate lowest set bit:       val & -val
-(fxand val (fx- val))
-
-; Clear lowest set bit:         val & (val - 1)
-(fxand val (fx- val 1))
+(fxand val #b1111)               ; val & 0xF              Low 4 bits
+(fxand val (fx- (fxsll 1 n) 1))  ; val & ((1 << n) - 1)   Low N bits
 ```
