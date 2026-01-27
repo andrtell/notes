@@ -1,3 +1,5 @@
+[Top](../chez.md)
+
 # Binary Input
 
 __Sample data__
