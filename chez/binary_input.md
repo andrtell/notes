@@ -222,17 +222,15 @@ __Bits and bytes__
 ```scheme
 WIP
 
-; Mask with N bits:             (1U << N) - 1
-(- (fxsll 1 N) 1)
+; Mask with N bits:             
+(- (fxsll 1 N) 1)                ; (1U << N) - 1
 
-; Set bit N:                    val | (1 << N)
-(fxior val (fxsll 1 N))
+; Update bit N:
+(fxcopy-bit val N 1)             ; Set bit N
+(fxcopy-bit val N 0)             ; Clear bit N
 
-;OR just
-(fxcopy-bit val N 1)
-
-; Clear bit N:                  val & ~(1 << N)
-(fxand val (fxnot (fxsll 1 N)))
+(fxior val (fxsll 1 N))          ; val | (1 << N)     Set   bit N
+(fxand val (fxnot (fxsll 1 N)))  ; val & ~(1 << N)    Clear bit N
 
 ;OR just
 (fxcopy-bit val N 0)
