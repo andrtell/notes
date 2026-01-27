@@ -1,4 +1,4 @@
-[Top](../chez.md)
+[Top](../chez.md)  [Prev](./chez_scripts.md)
 
 # Binary Input
 
